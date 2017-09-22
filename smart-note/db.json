@@ -1,0 +1,39 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "SmartNote is cool",
+      "content": "Welcome to SmartNote, you'll love it!"
+    },
+    {
+      "id": 2,
+      "title": "Software Engineering",
+      "contenet": "This is an awesome class, keep on coding!"
+    },
+    {
+      "id": 3,
+      "title": "Go gators",
+      "content": "It's great to be a Florida gator!"
+    },
+    {
+      "title": "hi",
+      "content": "",
+      "id": 4
+    },
+    {
+      "title": "how are you ",
+      "content": "",
+      "id": 5
+    },
+    {
+      "title": "so coooool",
+      "content": "",
+      "id": 6
+    },
+    {
+      "title": "I am so happy~~~",
+      "content": "",
+      "id": 7
+    }
+  ]
+}

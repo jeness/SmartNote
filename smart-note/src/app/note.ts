@@ -1,9 +1,10 @@
 export class Note {
-    id: number;
-    title = '';
-    content = '';
-  
-    constructor(values: Object = {}) {
-      Object.assign(this, values);
-    }
+  id: number;
+  title: string = '';
+  complete: boolean = false;
+
+  constructor(values: Object = {}) {
+    Object.assign(this, values);
+  }
 }
+

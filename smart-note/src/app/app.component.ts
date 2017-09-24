@@ -1,50 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { NoteDataService } from './note-data.service';
-import { Note } from './note';
+import { Component } from '@angular/core';
+import {Note} from './note';
+import {NoteDataService} from './note-data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [NoteDataService]  
+
+  providers: [NoteDataService]
 })
+export class AppComponent {
+  title = 'app';
 
-export class AppComponent implements OnInit {
+  private noteDataService: NoteDataService;
+  
+  newNote: Note = new Note();
 
-  notes: Note[] = [];
-
-  constructor(
-    private noteDataService: NoteDataService
-  ) {
+  constructor(noteDataService: NoteDataService) {
+    this.noteDataService = noteDataService;
   }
 
-  public ngOnInit() {
-    this.noteDataService
-      .getAllNotes()
-      .subscribe(
-        (notes) => {
-          this.notes = notes;
-        }
-      );
+  addNote() {
+    this.noteDataService.addNote(this.newNote);
+    this.newNote = new Note();
   }
 
-  onAddNote(note) {
-    this.noteDataService
-      .addNote(note)
-      .subscribe(
-        (newNote) => {
-          this.notes = this.notes.concat(newNote);
-        }
-      );
+  toggleNoteComplete(note) {
+    this.noteDataService.toggleNoteComplete(note);
   }
 
-  onRemoveNote(note) {
-    this.noteDataService
-      .deleteNoteById(note.id)
-      .subscribe(
-        (_) => {
-          this.notes = this.notes.filter((n) => n.id !== note.id);
-        }
-      );
+  removeNote(note) {
+    this.noteDataService.deleteNoteById(note.id);
   }
+
+  get notes() {
+    return this.noteDataService.getAllNotes();
+  }
+
 }

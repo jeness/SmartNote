@@ -1,4 +1,4 @@
-import {Note} from './note';
+import { Note } from './note';
 
 describe('Note', () => {
   it('should create an instance', () => {
@@ -6,11 +6,13 @@ describe('Note', () => {
   });
 
   it('should accept values in the constructor', () => {
-    const note = new Note({
+    let note = new Note({
       title: 'hello',
-      content: 'Welcome to SmartNote'
+      complete: true
     });
     expect(note.title).toEqual('hello');
-    expect(note.content).toEqual('Welcome to SmartNote');
+    expect(note.complete).toEqual(true);
   });
+  
+  
 });

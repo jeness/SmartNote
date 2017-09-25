@@ -10,6 +10,10 @@ import { NoteListItemComponent } from './note-list-item/note-list-item.component
 import { NoteListFooterComponent } from './note-list-footer/note-list-footer.component';
 import { NoteDataService } from './note-data.service';
 import { ApiService } from './api.service';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,15 @@ import { ApiService } from './api.service';
     NoteListComponent,
     NoteListHeaderComponent,
     NoteListItemComponent,
-    NoteListFooterComponent
+    NoteListFooterComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
   ],
   providers: [NoteDataService, ApiService],
   bootstrap: [AppComponent]

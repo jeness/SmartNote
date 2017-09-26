@@ -36,4 +36,9 @@ export class NoteDataService {
     return this.api.getNoteById(noteId);
   }
 
+  // Toggle complete
+  toggleNoteComplete(note: Note) {
+    note.complete = !note.complete;
+    return this.api.updateNote(note);
+  }
 }

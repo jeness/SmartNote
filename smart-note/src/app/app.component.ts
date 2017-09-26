@@ -38,6 +38,15 @@ export class AppComponent implements OnInit {
       );
   }
 
+  onToggleNoteComplete(note) {
+    this.noteDataService
+      .toggleNoteComplete(note)
+      .subscribe(
+        (updatedNote) => {
+          note = updatedNote;
+        }
+      );
+  }
   onRemoveNote(note) {
     this.noteDataService
       .deleteNoteById(note.id)

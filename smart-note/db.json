@@ -1,16 +1,10 @@
 {
   "notes": [
     {
-      "title": "good morning",
+      "title": "this is the first test",
       "content": "",
       "complete": false,
       "id": 1
-    },
-    {
-      "title": "another test",
-      "content": "",
-      "complete": false,
-      "id": 2
     }
   ]
 }

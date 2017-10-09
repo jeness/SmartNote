@@ -14,7 +14,7 @@ export class NoteDataService {
   notes: Note[] = [];
 
   constructor() { }
-
+  //Simulate POST/notes
   addNote(note: Note): NoteDataService {
     if(!note.id) {
       note.id = ++this.lastId;

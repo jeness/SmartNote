@@ -1,65 +1,45 @@
 import { Injectable } from '@angular/core';
-import {Note} from './note';
-
-
+import { Note } from './note';
+import { ApiService } from './api.service';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class NoteDataService {
 
-  // Placeholder for last id so we can simulate
-  // automatic incrementing of id's
-  lastId: number = 0;
-  
-  
-  notes: Note[] = [];
+  constructor(
+    private api: ApiService
+  ) {
+  }
 
-  constructor() { }
-  //Simulate POST/notes
-  addNote(note: Note): NoteDataService {
-    if(!note.id) {
-      note.id = ++this.lastId;
-    }
-    this.notes.push(note);
-    return this;
+  // Simulate POST /notes
+  addNote(note: Note): Observable<Note> {
+    return this.api.createNote(note);
   }
 
   // Simulate DELETE /notes/:id
-  deleteNoteById(id: number): NoteDataService {
-    this.notes = this.notes
-      .filter(note => note.id !== id);
-    return this;
+  deleteNoteById(noteId: number): Observable<Note> {
+    return this.api.deleteNoteById(noteId);
   }
 
   // Simulate PUT /notes/:id
-  updateNoteById(id: number, values: Object = {}): Note {
-    let note = this.getNoteById(id);
-    if (!note) {
-      return null;
-    }
-    Object.assign(note, values);
-    return note;
+  updatNote(note: Note): Observable<Note> {
+    return this.api.updateNote(note);
   }
 
   // Simulate GET /notes
-  getAllNotes(): Note[] {
-    return this.notes;
+  getAllNotes(): Observable<Note[]> {
+    return this.api.getAllNotes();
   }
 
-  // Simulate GET /notes/:id
-  getNoteById(id: number): Note {
-    return this.notes
-      .filter(note => note.id === id)
-      .pop();
+  // Simulate GET /Notes/:id
+  getNoteById(noteId: number): Observable<Note> {
+    return this.api.getNoteById(noteId);
   }
 
-  // Toggle note complete
-  toggleNoteComplete(note: Note){
-    let updatedNote = this.updateNoteById(note.id, {
-      complete: !note.complete
-    });
-    return updatedNote;
+  // Toggle complete
+  toggleNoteComplete(note: Note) {
+    note.complete = !note.complete;
+    return this.api.updateNote(note);
   }
-  
 
 }
-

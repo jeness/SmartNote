@@ -22,7 +22,7 @@ export class AppComponent {
     this.noteDataService.toggleNoteComplete(note);
   }
 
-  onRemoveTodo(note) {
+  onRemoveNote(note) {
     this.noteDataService.deleteNoteById(note.id);
   }
 

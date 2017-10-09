@@ -13,7 +13,14 @@ export class NoteListItemComponent {
   @Output()
   remove: EventEmitter<Note> = new EventEmitter();
 
+  @Output()
+  toggleComplete: EventEmitter<Note> = new EventEmitter();
+
   constructor() {
+  }
+
+  toggleNoteComplete(note: Note) {
+    this.toggleComplete.emit(note);
   }
 
   removeNote(note: Note) {

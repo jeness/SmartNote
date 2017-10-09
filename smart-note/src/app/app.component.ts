@@ -5,7 +5,7 @@ import {NoteDataService} from './note-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [NoteDataService]
+  //providers: [NoteDataService]
 })
 export class AppComponent {
 

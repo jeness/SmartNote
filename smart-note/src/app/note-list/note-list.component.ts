@@ -15,9 +15,15 @@ export class NoteListComponent {
   @Output()
   remove: EventEmitter<Note> = new EventEmitter();
 
+  @Output()
+  toggleComplete: EventEmitter<Note> = new EventEmitter();
+
   constructor() {
   }
 
+  onToggleNoteComplete(note: Note) {
+    this.toggleComplete.emit(note);
+  }
   onRemoveNote(note: Note) {
     this.remove.emit(note);
   }

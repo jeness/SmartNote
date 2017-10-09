@@ -1,4 +1,6 @@
 module.exports = {
-    'secrect': 'linwalkernodelogindemo',
-    'database': 'mongodb://localhost:27017/node-login'
+    'database': 'mongodb://localhost:27017/node-login',
+    'client_id': '83b21756e93d6ce27075',
+    'client_secret': 'd87c4163ece5695a9ded1e8bf2701c5ee2651f28',
+    'scope': ['user'],
 };

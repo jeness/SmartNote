@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteDataService } from '../note-data.service';
 import { Note } from '../note';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-notes',
@@ -12,22 +13,21 @@ import { Note } from '../note';
 export class NotesComponent implements OnInit {
 
   notes: Note[] = [];
-
   constructor(
-    private noteDataService: NoteDataService
+    private noteDataService: NoteDataService,
+    private route: ActivatedRoute    
   ) {
   }
 
   public ngOnInit() {
-    this.noteDataService
-      .getAllNotes()
+    this.route.data
+      .map((data) => data['notes'])
       .subscribe(
         (notes) => {
           this.notes = notes;
         }
       );
   }
-
   onAddNote(note) {
     this.noteDataService
       .addNote(note)

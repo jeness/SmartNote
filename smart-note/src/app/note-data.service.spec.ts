@@ -3,7 +3,7 @@ import {NoteDataService} from './note-data.service';
 import { ApiService } from './api.service';
 import { ApiMockService } from './api-mock.service';
 
-describe('TodoDataService', () => {
+describe('NoteDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [

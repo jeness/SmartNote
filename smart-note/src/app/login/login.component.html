@@ -1,3 +1,19 @@
-<p>
-  login works!
-</p>
+<div class="login-wrap">
+  <div class="login-title">
+    <img src="../../assets/icons8-Pen.png">
+    SmartNote
+  </div>
+  <div class="login-panel">
+    <input type="text" class="login-name" placeholder="username" [(ngModel)]="name">
+    <input type="password" class="login-pwd" placeholder="password" (keydown.enter)="login()" [(ngModel)]="pwd">
+    <button type="submit" class="login-submit" (click)="login()">Log In</button>
+    <!-- <button type="submit" class="login-submit" (click)="login()">Register</button> -->
+    <!-- <div class="case-number">Test Account: test' & Password: test123456</div> -->
+  </div>
+</div>
+<!-- <div class="github">
+  <a href="https://github.com/Shanfang/SmartNote" target="_blank">
+    <i class="icon-social-github"></i>
+    
+  </a>
+</div> -->

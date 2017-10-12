@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <section class="noteapp">
+    <app-note-list-header
+      (add)="onAddNote($event)"
+    ></app-note-list-header>
+    <app-note-list
+      [notes]="notes"
+      (toggleComplete)="onToggleNoteComplete($event)"    
+      (remove)="onRemoveNote($event)"
+    ></app-note-list>
+    <app-note-list-footer
+      [notes]="notes"
+    ></app-note-list-footer>
+  </section>
+
+</body>
+</html>
+

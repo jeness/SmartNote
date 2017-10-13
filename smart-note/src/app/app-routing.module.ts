@@ -15,7 +15,7 @@ const routes: Routes = [
     },
     {
         path: "",
-        redirectTo: "notes",
+        redirectTo: "/login",
         pathMatch: "full"
     },
     {
@@ -27,9 +27,9 @@ const routes: Routes = [
     },
     {
         path: "home",
-        redirectTo: "notes",
-        pathMatch: "full",
-        //component: HomeComponent
+        //redirectTo: "notes",
+        //pathMatch: "full",
+        component: HomeComponent
     },
     {
         path: "**",
@@ -42,6 +42,7 @@ const routes: Routes = [
     exports: [RouterModule],
     providers: [
       NotesResolver
-    ]
+    ],
+    declarations: []
   })
 export class AppRoutingModule { }

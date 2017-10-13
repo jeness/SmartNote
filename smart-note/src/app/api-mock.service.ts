@@ -12,19 +12,19 @@ export class ApiMockService {
 
   public getAllNotes(): Observable<Note[]> {
     return Observable.of([
-      new Note({id: 1, title: 'SmartNote is cool', content: 'Welcome to SmartNote!'})
+      new Note({id: 1, title: 'SmartNote is cool', complete: false, content: 'Welcome to SmartNote!'})
     ]);
   }
 
   public createNote(note: Note): Observable<Note> {
     return Observable.of(
-      new Note({id: 1, title: 'SmartNote is cool', content: 'Welcome to SmartNote!'})
+      new Note({id: 1, title: 'SmartNote is cool', complete: false, content: 'Welcome to SmartNote!'})
     );
   }
 
   public getNoteById(noteId: number): Observable<Note> {
     return Observable.of(
-      new Note({id: 1, title: 'SmartNote is cool', content: 'Welcome to SmartNote!'})
+      new Note({id: 1, title: 'SmartNote is cool', complete: false, content: 'Welcome to SmartNote!'})
     );
   }
 

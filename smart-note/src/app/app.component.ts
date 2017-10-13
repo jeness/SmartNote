@@ -1,50 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { NoteDataService } from './note-data.service';
-import { Note } from './note';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [NoteDataService]  
+
+  providers: []
 })
-
-export class AppComponent implements OnInit {
-
-  notes: Note[] = [];
-
-  constructor(
-    private noteDataService: NoteDataService
-  ) {
-  }
-
-  public ngOnInit() {
-    this.noteDataService
-      .getAllNotes()
-      .subscribe(
-        (notes) => {
-          this.notes = notes;
-        }
-      );
-  }
-
-  onAddNote(note) {
-    this.noteDataService
-      .addNote(note)
-      .subscribe(
-        (newNote) => {
-          this.notes = this.notes.concat(newNote);
-        }
-      );
-  }
-
-  onRemoveNote(note) {
-    this.noteDataService
-      .deleteNoteById(note.id)
-      .subscribe(
-        (_) => {
-          this.notes = this.notes.filter((n) => n.id !== note.id);
-        }
-      );
-  }
+export class AppComponent {
 }

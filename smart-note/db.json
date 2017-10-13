@@ -1,8 +1,21 @@
 {
   "notes": [
     {
-      "title": "this is the first test",
-      "content": ""
+      "title": "SmartNote is cool",
+      "complete": false,
+      "id": 1,
+      "content": "Welcome to SmartNote, you'll love it!"
+    },
+    {
+      "id": 2,
+      "title": "Software Engineering",
+      "contenet": "This is an awesome class, keep on coding!"
+    },
+    {
+      "title": "Go gators",
+      "complete": false,
+      "id": 3,
+      "content": "It's great to be a Florida gator!"
     }
   ]
 }

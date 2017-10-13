@@ -17,6 +17,7 @@ export class ApiService {
   ) {
   }
 
+  // api: GET/notes
   public getAllNotes(): Observable<Note[]> {
     return this.http
       .get(API_URL + '/notes')
@@ -27,6 +28,7 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  // api: POST/NOTES
   public createNote(note: Note): Observable<Note> {
     return this.http
       .post(API_URL + '/notes', note)
@@ -36,6 +38,7 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  // api: GET/notes/:id
   public getNoteById(noteId: number): Observable<Note> {
     return this.http
       .get(API_URL + '/notes/' + noteId)
@@ -45,6 +48,7 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  // api: PUT/notes/:id
   public updateNote(note: Note): Observable<Note> {
     return this.http
       .put(API_URL + '/notes/' + note.id, note)
@@ -54,6 +58,7 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  // api: DELETE/notes/:id
   public deleteNoteById(noteId: number): Observable<null> {
     return this.http
       .delete(API_URL + '/notes/' + noteId)

@@ -1,47 +1,58 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+// import { Injectable } from '@angular/core';
+// import { environment } from 'environments/environment';
+// import { Http, Response } from '@angular/http';
+// import { Tag } from '../../tag';
 
-@Injectable()
-export class TagService {
-  tagList = [];
-  tagList$ = new BehaviorSubject<Array<object>>(this.tagList);
+// import { Observable } from 'rxjs/Observable';
+// import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/catch';
+// import 'rxjs/add/observable/throw';
 
-  constructor(
-    private http: HttpClient
-  ) {
-    this._updateTagList();
-  }
+// const API_URL = environment.apiUrl;
 
-  // add
-  _addTag(name: String) {
-    this.http.post('/api/addTag', {
-      name: name
-    })
-    .subscribe((data) => {
-      this._updateTagList();
-    });
-  }
+// @Injectable()
+// export class TagService {
 
-  // delete
-  _deleteTag(id) {
-    this.http.post('/api/deleteTag', {
-      id: id
-    }).subscribe((data) => {
-        this._updateTagList();
-      });
-  }
+//   constructor(
+//     private http: Http
+//   ) {
+//   }
 
-  // getlist
-  _getTagList() {
-    return this.http.get('/api/TagList');
-  }
+//   // api: GET/tag
+//   public _getTagList(): Observable<Tag[]> {
+//     return this.http
+//       .get(API_URL + '/tag')
+//       .map(response => {
+//         const tags = response.json();
+//         return tags.map((tag) => new Tag(tag));
+//       })
+//       .catch(this.handleError);
+//   }
 
-  _updateTagList() {
-    this.http.get('/api/TagList')
-      .subscribe((res) => {
-        this.tagList$.next(res['data']);
-      });
-  }
+//   // api: POST/tag
+//   public _addTag(tag: Tag): Observable<Tag> {
+//     return this.http
+//       .post(API_URL + '/tag', tag)
+//       .map(response => {
+//         return new Tag(response.json());
+//       })
+//       .catch(this.handleError);
+//   }
 
-}
+//   // api: DELETE/tag/:id
+//   public _deleteTag(id: number): Observable<null> {
+//     return this.http
+//       .delete(API_URL + '/tag/' + id)
+//       .map(response => null)
+//       .catch(this.handleError);
+//   }
+
+//   private handleError (error: Response | any) {
+//     console.error('ApiService::handleError', error);
+//     return Observable.throw(error);
+//   }
+// }
+
+
+
+

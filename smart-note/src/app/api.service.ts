@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
 import { Http, Response } from '@angular/http';
 import { Note } from './note';
+import { Tag } from './tag';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -28,6 +29,17 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+    // api: GET/tags
+    public getAllTags(): Observable<Tag[]> {
+      return this.http
+        .get(API_URL + '/tags')
+        .map(response => {
+          const tags = response.json();
+          return tags.map((tag) => new Tag(tag));
+        })
+        .catch(this.handleError);
+    }
+
   // api: POST/NOTES
   public createNote(note: Note): Observable<Note> {
     return this.http
@@ -37,6 +49,16 @@ export class ApiService {
       })
       .catch(this.handleError);
   }
+
+    // api: POST/tags
+    public createTag(tag: Tag): Observable<Tag> {
+      return this.http
+        .post(API_URL + '/tags', tag)
+        .map(response => {
+          return new Tag(response.json());
+        })
+        .catch(this.handleError);
+    }
 
   // api: GET/notes/:id
   public getNoteById(noteId: number): Observable<Note> {
@@ -48,6 +70,15 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+    // // api: GET/tags/:id
+    // public getTagById(tagId: number): Observable<Tag> {
+    //   return this.http
+    //     .get(API_URL + '/tags/' + tagId)
+    //     .map(response => {
+    //       return new Tag(response.json());
+    //     })
+    //     .catch(this.handleError);
+    // }
   // api: PUT/notes/:id
   public updateNote(note: Note): Observable<Note> {
     return this.http
@@ -65,6 +96,14 @@ export class ApiService {
       .map(response => null)
       .catch(this.handleError);
   }
+
+    // api: DELETE/tags/:id
+    public deleteTagById(tagId: number): Observable<null> {
+      return this.http
+        .delete(API_URL + '/tags/' + tagId)
+        .map(response => null)
+        .catch(this.handleError);
+    }
 
   private handleError (error: Response | any) {
     console.error('ApiService::handleError', error);

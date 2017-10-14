@@ -13,6 +13,7 @@ import { NoteListComponent } from './note-list/note-list.component';
 import { NoteListItemComponent } from './note-list-item/note-list-item.component';
 import { NoteListFooterComponent } from './note-list-footer/note-list-footer.component';
 import { NoteDataService } from './note-data.service';
+import { TagDataService } from './tag-data.service';
 import { ApiService } from './api.service';
 
 import { LoginComponent } from './login/login.component';
@@ -20,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { NotesComponent } from './notes/notes.component';
+//import { TagComponent } from './tag/tag.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { DropdownComponent } from './component/dropdown/dropdown.component';
@@ -32,7 +34,8 @@ import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-e
 import { LoadingBarService } from './services/loading-bar/loading-bar.service';
 import { MsgService } from './services/msg/msg.service';
 import { NoteService } from './services/note/note.service';
-import { TagService } from './services/tag/tag.service';
+//import { TagService } from './services/tag/tag.service';
+import { TagComponent } from './tag/tag.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { TagService } from './services/tag/tag.service';
     AddNoteComponent,
     DropdownComponent,
     ButtonComponent,
-    MarkdownEditorDirective
+    MarkdownEditorDirective,
+    TagComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,7 @@ import { TagService } from './services/tag/tag.service';
     },
     NoteDataService, ApiService,
     LoadingBarService,
-    TagService,
+    TagDataService,
     NoteService,
     MsgService,
   ],

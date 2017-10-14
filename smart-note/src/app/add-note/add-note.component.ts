@@ -18,9 +18,12 @@ import { Router } from '@angular/router';
 import { MsgService } from '../services/msg/msg.service';
 import { Subscription } from 'rxjs/Subscription';
 import { NoteService } from '../services/note/note.service';
-import { TagService } from '../services/tag/tag.service';
+import { TagDataService } from '../tag-data.service';
 import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { dropdownItem } from '../component/dropdown/dropdown.component';
+import { ActivatedRoute } from '@angular/router';
+import { Tag } from '../tag';
+
 
 @Component({
   selector: 'app-add-note',
@@ -34,18 +37,23 @@ export class AddNoteComponent implements OnInit, OnDestroy {
   title = '';
   content = '';
   tagList = [];
-
+  tags: Tag[]  = [];
   constructor(
-    private tagService: TagService,
+    private tagDataService: TagDataService,
     private noteService: NoteService,
     private msg: MsgService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute        
   ) { }
 
   ngOnInit() {
-    this.dropdownMenuSub = this.tagService.tagList$.subscribe((data) => {
-      this.dropdownMenu = data;
-    });
+    this.route.data
+    .map((data) => data['tags'])
+    .subscribe(
+      (tags) => {
+        this.tags = tags;
+      }
+    );
   }
 
   ngOnDestroy() {

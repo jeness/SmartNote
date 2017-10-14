@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
 import { AddNoteComponent } from './add-note/add-note.component';
-
+import { TagComponent } from './tag/tag.component'
 const routes: Routes = [
     {
         path: "login" ,
@@ -30,6 +30,11 @@ const routes: Routes = [
         path: 'addNote',
         component: AddNoteComponent,
         children: []
+      },
+      {
+        path: "tags",
+        component: TagComponent,
+        children: []        
       },
     {
         path: "home",

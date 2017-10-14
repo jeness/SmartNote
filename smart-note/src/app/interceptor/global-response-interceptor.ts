@@ -18,7 +18,7 @@ export class GlobalResponseInterceptor implements HttpInterceptor {
     return next.handle(req).map(event => {
       if (event instanceof HttpResponse) {
         if (event.body.code === 401) {
-          this.msg.info('登录已过期！');
+          this.msg.info('Login time passed！');
           setTimeout(() => {
             this.router.navigate(['/index']);
           }, 2000);

@@ -1,6 +1,6 @@
 <div class="my-dropdown">
   <div class="my-dropdown-rel" (click)="toggleDropdownMenu($event)">
-    <a>{{Label || '未定义'}}</a>
+    <a>{{Label || 'Undefined'}}</a>
     <i class="ion-android-arrow-dropdown"></i> 
   </div>
   <div class="my-dropdown-menu" [@dropdownMenuState]="dropdownMenu.state">

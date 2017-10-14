@@ -8,7 +8,7 @@ import highlight from 'highlight.js';
 })
 export class MarkdownEditorDirective {
   @Input() inputMarkdownEditorValue: String = '';
-  // 指令往外部输出编辑器的值
+  //command output editor value to external 
   @Output() MarkdownEditorValue = new EventEmitter<any>();
 
   constructor(private el: ElementRef) {
@@ -148,7 +148,7 @@ export class MarkdownEditorDirective {
             fullscreenDom.style.maxHeight = window.innerHeight - 70 + 'px';
             // let toolbar = <HTMLElement>document.querySelector('.editor-toolbar')
             // let input = document.createElement('input')
-            // input.value = '这是标题'
+            // input.value = 'this is title'
             // toolbar.appendChild(input)
           },
           className: 'fa fa-arrows-alt no-disable no-mobile',

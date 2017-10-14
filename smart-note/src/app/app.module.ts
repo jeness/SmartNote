@@ -19,6 +19,7 @@ import { NotesComponent } from './notes/notes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { DropdownComponent } from './component/dropdown/dropdown.component';
+import { ButtonComponent } from './component/button/button.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DropdownComponent } from './component/dropdown/dropdown.component';
     NotesComponent,
     PageNotFoundComponent,
     AddNoteComponent,
-    DropdownComponent
+    DropdownComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -72,10 +72,10 @@ p {
 }
 
 .profile-card .header a > img {
-    width: 120px;
+    width: 90px;
     max-width: 100%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+    -webkit-border-radius: 90%;
+    border-radius: 90%;
     -webkit-transition: -webkit-box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease;
 }

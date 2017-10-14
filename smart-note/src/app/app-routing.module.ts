@@ -7,6 +7,7 @@ import { NotesComponent } from './notes/notes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
+import { AddNoteComponent } from './add-note/add-note.component';
 
 const routes: Routes = [
     {
@@ -15,7 +16,7 @@ const routes: Routes = [
     },
     {
         path: "",
-        redirectTo: "notes",
+        redirectTo: "/login",
         pathMatch: "full"
     },
     {
@@ -25,6 +26,11 @@ const routes: Routes = [
             notes: NotesResolver
         }
     },
+    {
+        path: 'addNote',
+        component: AddNoteComponent,
+        children: []
+      },
     {
         path: "home",
         redirectTo: "notes",
@@ -42,6 +48,7 @@ const routes: Routes = [
     exports: [RouterModule],
     providers: [
       NotesResolver
-    ]
+    ],
+    declarations: []
   })
 export class AppRoutingModule { }

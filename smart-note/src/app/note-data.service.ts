@@ -43,3 +43,65 @@ export class NoteDataService {
   }
 
 }
+
+
+// @Injectable()
+// export class NoteDataService {
+
+//   // Placeholder for last id so we can simulate
+//   // automatic incrementing of id's
+//   lastId: number = 0;
+  
+  
+//   notes: Note[] = [];
+
+//   constructor() { }
+
+//   addNote(note: Note): NoteDataService {
+//     if(!note.id) {
+//       note.id = ++this.lastId;
+//     }
+//     this.notes.push(note);
+//     return this;
+//   }
+
+//   // Simulate DELETE /notes/:id
+//   deleteNoteById(id: number): NoteDataService {
+//     this.notes = this.notes
+//       .filter(note => note.id !== id);
+//     return this;
+//   }
+
+//   // Simulate PUT /notes/:id
+//   updateNoteById(id: number, values: Object = {}): Note {
+//     let note = this.getNoteById(id);
+//     if (!note) {
+//       return null;
+//     }
+//     Object.assign(note, values);
+//     return note;
+//   }
+
+//   // Simulate GET /notes
+//   getAllNotes(): Note[] {
+//     return this.notes;
+//   }
+
+//   // Simulate GET /notes/:id
+//   getNoteById(id: number): Note {
+//     return this.notes
+//       .filter(note => note.id === id)
+//       .pop();
+//   }
+
+//   // Toggle note complete
+//   toggleNoteComplete(note: Note){
+//     let updatedNote = this.updateNoteById(note.id, {
+//       complete: !note.complete
+//     });
+//     return updatedNote;
+//   }
+  
+
+// }
+

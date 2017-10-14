@@ -13,11 +13,7 @@ export class TagService {
     this._updateTagList();
   }
 
-<<<<<<< HEAD
   // add
-=======
-  // 新增
->>>>>>> refs/remotes/origin/master
   _addTag(name: String) {
     this.http.post('/api/addTag', {
       name: name
@@ -27,11 +23,7 @@ export class TagService {
     });
   }
 
-<<<<<<< HEAD
   // delete
-=======
-  // 删除
->>>>>>> refs/remotes/origin/master
   _deleteTag(id) {
     this.http.post('/api/deleteTag', {
       id: id
@@ -40,11 +32,7 @@ export class TagService {
       });
   }
 
-<<<<<<< HEAD
   // getlist
-=======
-  // 获取整个列表
->>>>>>> refs/remotes/origin/master
   _getTagList() {
     return this.http.get('/api/TagList');
   }

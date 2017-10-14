@@ -13,29 +13,17 @@ export class NoteService {
     this._updateAllNote();
   }
 
-<<<<<<< HEAD
   // add
-=======
-  // 添加
->>>>>>> refs/remotes/origin/master
   _addNote(param: editNote) {
     return this.http.post('/api/addNote', param);
   }
 
-<<<<<<< HEAD
   // modify
-=======
-  // 修改
->>>>>>> refs/remotes/origin/master
   _modifyNote(param: editNote) {
     return this.http.post('/api/modify', param);
   }
 
-<<<<<<< HEAD
   // delete
-=======
-  // 删除
->>>>>>> refs/remotes/origin/master
   _deleteNote(id) {
     return this.http.post('/api/deleteNote', {id: id});
   }

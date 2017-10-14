@@ -34,6 +34,7 @@ import { MsgService } from './services/msg/msg.service';
 import { NoteService } from './services/note/note.service';
 import { TagService } from './services/tag/tag.service';
 import { ViewNoteComponent } from './view-note/view-note.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ViewNoteComponent } from './view-note/view-note.component';
     DropdownComponent,
     ButtonComponent,
     MarkdownEditorDirective,
-    ViewNoteComponent
+    ViewNoteComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

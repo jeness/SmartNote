@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { ViewNoteComponent } from './view-note/view-note.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
     {
@@ -36,6 +37,10 @@ const routes: Routes = [
         path: 'viewNote',
         component: ViewNoteComponent,
         children: []
+    },
+    { 
+        path: 'about', 
+        component: AboutComponent 
     },
       
     {

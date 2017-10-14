@@ -17,6 +17,7 @@ import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { NotesComponent } from './notes/notes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddNoteComponent } from './add-note/add-note.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginComponent,
     HomeComponent,
     NotesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,

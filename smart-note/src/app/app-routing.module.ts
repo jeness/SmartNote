@@ -7,6 +7,7 @@ import { NotesComponent } from './notes/notes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
+import { AddNoteComponent } from './add-note/add-note.component';
 
 const routes: Routes = [
     {
@@ -26,10 +27,15 @@ const routes: Routes = [
         }
     },
     {
+        path: 'addNote',
+        component: AddNoteComponent,
+        children: []
+      },
+    {
         path: "home",
-        //redirectTo: "notes",
-        //pathMatch: "full",
-        component: HomeComponent
+        redirectTo: "notes",
+        pathMatch: "full",
+        //component: HomeComponent
     },
     {
         path: "**",

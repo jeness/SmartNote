@@ -33,6 +33,7 @@ import { LoadingBarService } from './services/loading-bar/loading-bar.service';
 import { MsgService } from './services/msg/msg.service';
 import { NoteService } from './services/note/note.service';
 import { TagService } from './services/tag/tag.service';
+import { ViewNoteComponent } from './view-note/view-note.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { TagService } from './services/tag/tag.service';
     AddNoteComponent,
     DropdownComponent,
     ButtonComponent,
-    MarkdownEditorDirective
+    MarkdownEditorDirective,
+    ViewNoteComponent
   ],
   imports: [
     BrowserModule,

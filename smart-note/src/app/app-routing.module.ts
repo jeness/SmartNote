@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { ViewNoteComponent } from './view-note/view-note.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,12 @@ const routes: Routes = [
         component: AddNoteComponent,
         children: []
       },
+    {
+        path: 'viewNote',
+        component: ViewNoteComponent,
+        children: []
+    },
+      
     {
         path: "home",
         redirectTo: "notes",

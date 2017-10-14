@@ -1,18 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-add-note',
-//   templateUrl: './add-note.component.html',
-//   styleUrls: ['./add-note.component.scss']
-// })
-// export class AddNoteComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
 
 import { Router } from '@angular/router';
 import { MsgService } from '../services/msg/msg.service';
@@ -64,11 +49,13 @@ export class AddNoteComponent implements OnInit, OnDestroy {
     this.content = data;
   }
 
-  // 保存笔记
+  // save notes
   save() {
     //if (this.title === '' || this.content === '' || this.tagList.length === 0) {
+      this.tagList.length = 1;
+      
       if (this.title === '' || this.content === '' ) {
-      this.msg.info('请输入完整的笔记信息！');
+      this.msg.info('Please complete note information');
     } else {
       const sub = this.noteService._addNote({
         title: this.title,
@@ -78,7 +65,7 @@ export class AddNoteComponent implements OnInit, OnDestroy {
         sourceLink: ''
       }).subscribe((res) => {
         if (res['code'] === 200) {
-          this.msg.info('保存成功！');
+          this.msg.info('Successfully saved!');
           this.noteService._updateAllNote();
           localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
           this.router.navigate(['/viewNote']);

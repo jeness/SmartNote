@@ -21,7 +21,7 @@ export class AddNoteComponent implements OnInit {
 // import { NoteService } from '../../services/note/note.service';
 // import { TagService } from './../../services/tag/tag.service';
 // import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
-// import { dropdownItem } from '../../component/dropdown/dropdown.component';
+// import { dropdownItem } from '../component/dropdown/dropdown.component';
 
 // @Component({
 //   selector: 'app-add-note',

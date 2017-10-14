@@ -56,7 +56,8 @@ body {
 
 .noteapp {
 	background: #fff;
-	margin: 75px 150px 50px 150px;
+	margin: 190px 0 40px 0;
+
 	position: relative;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
@@ -82,9 +83,10 @@ body {
 
 .noteapp h1 {
 	position: absolute;
-	top: -75px;
+	top: -160px;
 	width: 100%;
-	font-size: 50px;
+	font-size: 85px;
+
 	font-weight: 100;
 	text-align: center;
 	/* color: rgba(240, 128, 128, 0.8); */

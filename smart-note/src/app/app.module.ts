@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddNoteComponent } from './add-note/add-note.component';
 import { DropdownComponent } from './component/dropdown/dropdown.component';
 import { ButtonComponent } from './component/button/button.component';
+import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-editor.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ButtonComponent } from './component/button/button.component';
     PageNotFoundComponent,
     AddNoteComponent,
     DropdownComponent,
-    ButtonComponent
+    ButtonComponent,
+    MarkdownEditorDirective
   ],
   imports: [
     BrowserModule,

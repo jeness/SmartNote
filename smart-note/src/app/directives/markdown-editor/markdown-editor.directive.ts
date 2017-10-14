@@ -8,6 +8,7 @@ import highlight from 'highlight.js';
 })
 export class MarkdownEditorDirective {
   @Input() inputMarkdownEditorValue: String = '';
+  
   //command output editor value to external 
   @Output() MarkdownEditorValue = new EventEmitter<any>();
 

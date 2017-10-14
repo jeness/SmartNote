@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    
 
 <div class="add-note-wrap">
   <div class="add-note-title">
@@ -16,10 +21,13 @@
       </ul>
     </div>
     <div class="add-note-toolbar-btn">
-      <app-button [Icon]="'ion-checkmark-circled'" (click)="save()">Save</app-button>
+      <app-button [Icon]="'ion-checkmark-circled'" (click)="save()">Save and View</app-button>
     </div>
   </div>
   <div myMarkdownEditor (MarkdownEditorValue)="markdownValueChange($event)">
     <textarea style="display:none"></textarea>
   </div>  
 </div>
+</body>
+
+</html>

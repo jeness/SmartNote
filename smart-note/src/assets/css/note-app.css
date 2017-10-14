@@ -33,13 +33,13 @@ button {
 }
 
 body {
-	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 10px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
 	background: #94618e;
 	color: #4d4d4d;
-	min-width: 230px;
-	max-width: 550px;
-	margin: 0 auto;
+	/* min-width: 230px; */
+	/* max-width: 1000px; */
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 300;
@@ -57,6 +57,7 @@ body {
 .noteapp {
 	background: #fff;
 	margin: 190px 0 40px 0;
+
 	position: relative;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
 	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
@@ -85,6 +86,7 @@ body {
 	top: -160px;
 	width: 100%;
 	font-size: 85px;
+
 	font-weight: 100;
 	text-align: center;
 	/* color: rgba(240, 128, 128, 0.8); */

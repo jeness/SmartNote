@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { GlobalResponseInterceptor } from './interceptor/global-response-interceptor';
 
 import { AppComponent } from './app.component';
 import { NoteListHeaderComponent } from './note-list-header/note-list-header.component';
@@ -15,6 +19,25 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from './app-routing.module';
+import { NotesComponent } from './notes/notes.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddNoteComponent } from './add-note/add-note.component';
+import { DropdownComponent } from './component/dropdown/dropdown.component';
+import { ButtonComponent } from './component/button/button.component';
+
+// directive
+import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-editor.directive';
+
+// service
+import { LoadingBarService } from './services/loading-bar/loading-bar.service';
+import { MsgService } from './services/msg/msg.service';
+import { NoteService } from './services/note/note.service';
+import { TagService } from './services/tag/tag.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,15 +46,36 @@ import { AppRoutingModule } from './app-routing.module';
     NoteListItemComponent,
     NoteListFooterComponent,
     LoginComponent,
-    HomeComponent
+
+    HomeComponent,
+    NotesComponent,
+    PageNotFoundComponent,
+    AddNoteComponent,
+    DropdownComponent,
+    ButtonComponent,
+    MarkdownEditorDirective
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, 
     FormsModule,
     HttpModule,
     AppRoutingModule,
+
+    BrowserAnimationsModule,    
   ],
-  providers: [NoteDataService, ApiService],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: GlobalResponseInterceptor,
+      multi: true,
+    },
+    NoteDataService, ApiService,
+    LoadingBarService,
+    TagService,
+    NoteService,
+    MsgService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

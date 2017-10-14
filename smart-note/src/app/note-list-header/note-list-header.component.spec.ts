@@ -1,4 +1,7 @@
+/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { NoteListHeaderComponent } from './note-list-header.component';
 
@@ -8,7 +11,10 @@ describe('NoteListHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NoteListHeaderComponent ]
+      declarations: [ NoteListHeaderComponent ],
+      schemas: [
+        NO_ERRORS_SCHEMA
+      ]
     })
     .compileComponents();
   }));

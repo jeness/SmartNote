@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NotesComponent } from './notes/notes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { DropdownComponent } from './component/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddNoteComponent } from './add-note/add-note.component';
     HomeComponent,
     NotesComponent,
     PageNotFoundComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

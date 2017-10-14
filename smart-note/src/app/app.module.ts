@@ -14,10 +14,6 @@ import { NoteListItemComponent } from './note-list-item/note-list-item.component
 import { NoteListFooterComponent } from './note-list-footer/note-list-footer.component';
 import { NoteDataService } from './note-data.service';
 import { ApiService } from './api.service';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { RouterModule } from "@angular/router";
-import { AppRoutingModule } from './app-routing.module';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -46,7 +42,6 @@ import { TagService } from './services/tag/tag.service';
     NoteListItemComponent,
     NoteListFooterComponent,
     LoginComponent,
-
     HomeComponent,
     NotesComponent,
     PageNotFoundComponent,
@@ -61,7 +56,6 @@ import { TagService } from './services/tag/tag.service';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-
     BrowserAnimationsModule,    
   ],
   providers: [

@@ -1,12 +1,12 @@
 <div class="tag">
   <div class="input-wrap">
-    <input class="new-note" placeholder="Enter a tag" autofocus="" [(ngModel)]="newNote.title"    
-    (keydown.enter)="onAddTag(tagName)">
+    <input class="new-note" placeholder="Enter a tag" autofocus="" [(ngModel)]="newTag.title"    
+    keydown.enter)="addTag()">
   </div>
   <div class="tag-list-wrap">
     <div class="tag-item" *ngFor="let item of tagList; let i=index">
-      <div>{{item.name}}</div>
-      <i class="ion-close-round" (click)="delectTagItem(item._id)"></i>
+      <div>{{item.title}}</div>
+      <i class="ion-close-round" (click)="removeTag(item)"></i>
     </div>
   </div>
 </div>

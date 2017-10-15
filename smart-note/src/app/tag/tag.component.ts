@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TagDataService } from '../tag-data.service';
 import { Tag } from '../tag';
-import { ActivatedRoute } from '@angular/router';
+//import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tag',
@@ -11,40 +11,76 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class TagComponent implements OnInit {
-
-  tags: Tag[] = [];
+  // @Input() tag: Tag;
+  
+  // @Output()
+  // remove: EventEmitter<Tag> = new EventEmitter();
+  
+  tagList: Tag[] = [];
+  newTag: Tag = new Tag();
   constructor(
     private tagDataService: TagDataService,
-    private route: ActivatedRoute    
+    //private route: ActivatedRoute    
   ) {
   }
 
+  // public ngOnInit() {
+  //   this.route.data
+  //     .map((data) => data['tags'])
+  //     .subscribe(
+  //       (tags) => {
+  //         this.tagList = tags;
+  //       }
+  //     );
+  // }
+
   public ngOnInit() {
-    this.route.data
-      .map((data) => data['tags'])
+    this.tagDataService
+      .getAllTags()
       .subscribe(
         (tags) => {
-          this.tags = tags;
+          this.tagList = tags;
         }
       );
   }
-  onAddTag(tag) {
+  // onAddTag(tag) {
+  //   this.tagDataService
+  //     .addTag(tag)
+  //     .subscribe(
+  //       (newTag) => {
+  //         this.tagList = this.tagList.concat(newTag);
+  //       }
+  //     );
+  // }
+  addTag() {
     this.tagDataService
-      .addTag(tag)
+      .addTag(this.newTag)
       .subscribe(
         (newTag) => {
-          this.tags = this.tags.concat(newTag);
+          this.tagList = this.tagList.concat(newTag);
         }
       );
   }
 
-  onRemoveTag(tag) {
+  removeTag(tag) {
     this.tagDataService
       .deleteTagById(tag.id)
       .subscribe(
         (_) => {
-          this.tags = this.tags.filter((n) => n.id !== tag.id);
+          this.tagList = this.tagList.filter((n) => n.id !== tag.id);
         }
       );
   }
+
+  // onRemoveTag(tag) {
+  //   this.tagDataService
+  //     .deleteTagById(tag.id)
+  //     .subscribe(
+  //       (_) => {
+  //         this.tagList = this.tagList.filter((n) => n.id !== tag.id);
+  //       }
+  //     );
+  // }
+
+
 }

@@ -32,7 +32,7 @@ export class ApiService {
     // api: GET/tags
     public getAllTags(): Observable<Tag[]> {
       return this.http
-        .get(API_URL + '/tags')
+        .get(API_URL + '/tag')
         .map(response => {
           const tags = response.json();
           return tags.map((tag) => new Tag(tag));
@@ -53,7 +53,7 @@ export class ApiService {
     // api: POST/tags
     public createTag(tag: Tag): Observable<Tag> {
       return this.http
-        .post(API_URL + '/tags', tag)
+        .post(API_URL + '/tag', tag)
         .map(response => {
           return new Tag(response.json());
         })
@@ -70,16 +70,6 @@ export class ApiService {
       .catch(this.handleError);
   }
 
-    // // api: GET/tags/:id
-    // public getTagById(tagId: number): Observable<Tag> {
-    //   return this.http
-    //     .get(API_URL + '/tags/' + tagId)
-    //     .map(response => {
-    //       return new Tag(response.json());
-    //     })
-    //     .catch(this.handleError);
-    // }
-  // api: PUT/notes/:id
   public updateNote(note: Note): Observable<Note> {
     return this.http
       .put(API_URL + '/notes/' + note.id, note)
@@ -100,7 +90,7 @@ export class ApiService {
     // api: DELETE/tags/:id
     public deleteTagById(tagId: number): Observable<null> {
       return this.http
-        .delete(API_URL + '/tags/' + tagId)
+        .delete(API_URL + '/tag/' + tagId)
         .map(response => null)
         .catch(this.handleError);
     }

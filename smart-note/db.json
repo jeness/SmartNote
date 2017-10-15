@@ -23,5 +23,39 @@
       "content": "",
       "id": 4
     }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "title": "tag1",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "title": "tag2",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "title": "tag3",
+      "complete": false
+    }
+  ],
+  "tagList": [
+    {
+      "id": 1,
+      "title": "tagList1",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "title": "tagList2",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "title": "tagList3",
+      "complete": false
+    }
   ]
 }

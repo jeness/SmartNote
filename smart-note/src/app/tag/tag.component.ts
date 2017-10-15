@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { TagDataService } from '../tag-data.service';
+//import { TagDataService } from '../tag-data.service';
+import { TagService } from '../services/tag/tag.service';
 import { Tag } from '../tag';
 import { MsgService } from './../services/msg/msg.service';
 
@@ -7,20 +8,22 @@ import { MsgService } from './../services/msg/msg.service';
   selector: 'app-tag',
   templateUrl: './tag.component.html',
   styleUrls: ['./tag.component.scss'],
-  providers: [TagDataService]  
+  //providers: [TagDataService] 
+  providers: [TagService]    
 })
 
 export class TagComponent implements OnInit {  
   tagList: Tag[] = [];
   newTag: Tag = new Tag();
   constructor(
-    private tagDataService: TagDataService,
+    //private tagDataService: TagDataService,
+    private tagService: TagService,    
     private msg: MsgService    
   ) {
   }
 
   public ngOnInit() {
-    this.tagDataService
+    this.tagService
       .getAllTags()
       .subscribe(
         (tags) => {
@@ -30,7 +33,7 @@ export class TagComponent implements OnInit {
   }
 
   addTag() {
-    this.tagDataService
+    this.tagService
     .addTag(this.newTag)
     .subscribe(
       (newTag) => {
@@ -53,7 +56,7 @@ export class TagComponent implements OnInit {
   }
 
   removeTag(tag) {
-    this.tagDataService
+    this.tagService
       .deleteTagById(tag.id)
       .subscribe(
         (_) => {

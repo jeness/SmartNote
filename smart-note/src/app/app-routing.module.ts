@@ -29,21 +29,21 @@ const routes: Routes = [
             notes: NotesResolver
         }
     },
-    {
-        path: 'addNote',
-        component: AddNoteComponent,
-        children: []
-      },
+    // {
+    //     path: 'addNote',
+    //     component: AddNoteComponent,
+    //     children: []
+    //   },
       {
         path: "tag",
         component: TagComponent,
         children: []        
       },
-    {
-        path: 'viewNote',
-        component: ViewNoteComponent,
-        children: []
-    },
+    // {
+    //     path: 'viewNote',
+    //     component: ViewNoteComponent,
+    //     children: []
+    // },
     { 
         path: 'about', 
         component: AboutComponent 

@@ -26,19 +26,19 @@
   ],
   "tags": [
     {
-      "id": 1,
       "title": "tag1",
-      "complete": false
+      "complete": false,
+      "id": 1
     },
     {
-      "id": 2,
       "title": "tag2",
-      "complete": false
+      "complete": false,
+      "id": 2
     },
     {
-      "id": 3,
       "title": "tag3",
-      "complete": false
+      "complete": false,
+      "id": 3
     }
   ],
   "tagList": [

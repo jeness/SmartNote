@@ -32,7 +32,7 @@ export class ApiService {
     // api: GET/tags
     public getAllTags(): Observable<Tag[]> {
       return this.http
-        .get(API_URL + '/tag')
+        .get(API_URL + '/tags')
         .map(response => {
           const tags = response.json();
           return tags.map((tag) => new Tag(tag));
@@ -53,7 +53,7 @@ export class ApiService {
     // api: POST/tags
     public createTag(tag: Tag): Observable<Tag> {
       return this.http
-        .post(API_URL + '/tag', tag)
+        .post(API_URL + '/tags', tag)
         .map(response => {
           return new Tag(response.json());
         })
@@ -90,7 +90,7 @@ export class ApiService {
     // api: DELETE/tags/:id
     public deleteTagById(tagId: number): Observable<null> {
       return this.http
-        .delete(API_URL + '/tag/' + tagId)
+        .delete(API_URL + '/tags/' + tagId)
         .map(response => null)
         .catch(this.handleError);
     }

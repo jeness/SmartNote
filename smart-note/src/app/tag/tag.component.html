@@ -1,7 +1,7 @@
 <div class="tag">
   <div class="input-wrap">
-    <input class="new-note" placeholder="Enter a tag" autofocus="" [(ngModel)]="newTag.title"    
-    keydown.enter)="addTag()">
+    <input class="new-note" placeholder="Create a tag here" autofocus="" [(ngModel)]="newTag.title"    
+    (keydown.enter)="addTag()">
   </div>
   <div class="tag-list-wrap">
     <div class="tag-item" *ngFor="let item of tagList; let i=index">

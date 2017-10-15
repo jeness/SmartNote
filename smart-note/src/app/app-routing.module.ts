@@ -35,7 +35,7 @@ const routes: Routes = [
         children: []
       },
       {
-        path: "tags",
+        path: "tag",
         component: TagComponent,
         children: []        
       },

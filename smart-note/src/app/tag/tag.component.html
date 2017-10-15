@@ -1,12 +1,12 @@
 <div class="tag">
   <div class="input-wrap">
     <input class="new-note" placeholder="Create a tag here" autofocus="" [(ngModel)]="newTag.title"    
-    (keydown.enter)="addTag()">
+    (keyup.enter)="addTag()">
   </div>
   <div class="tag-list-wrap">
     <div class="tag-item" *ngFor="let item of tagList; let i=index">
       <div>{{item.title}}</div>
-      <i class="material-icons" (click)="removeTag(item)"> X</i>
+      <i class="material-icons" (click)="removeTag(item)"> backspace</i>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TagDataService } from '../tag-data.service';
 import { Tag } from '../tag';
+import { MsgService } from './../services/msg/msg.service';
 
 @Component({
   selector: 'app-tag',
@@ -14,6 +15,7 @@ export class TagComponent implements OnInit {
   newTag: Tag = new Tag();
   constructor(
     private tagDataService: TagDataService,
+    private msg: MsgService    
   ) {
   }
 
@@ -26,15 +28,28 @@ export class TagComponent implements OnInit {
         }
       );
   }
-  
+
   addTag() {
     this.tagDataService
-      .addTag(this.newTag)
-      .subscribe(
-        (newTag) => {
+    .addTag(this.newTag)
+    .subscribe(
+      (newTag) => {
+        if (newTag.title !== '') {
           this.tagList = this.tagList.concat(newTag);
+          this.newTag.title = '';          
+        } else {
+          this.msg.info('Invalid tag, please input something');
         }
-      );
+      }
+    );
+
+    // this.tagDataService
+    //   .addTag(this.newTag)
+    //   .subscribe(
+    //     (newTag) => {
+    //       this.tagList = this.tagList.concat(newTag);
+    //     }
+    //   );
   }
 
   removeTag(tag) {

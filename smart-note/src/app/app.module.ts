@@ -38,7 +38,7 @@ import { NoteService } from './services/note/note.service';
 import { TagComponent } from './tag/tag.component';
 import { ViewNoteComponent } from './view-note/view-note.component';
 import { AboutComponent } from './about/about.component';
-import { LinkNoteComponent } from './link-note/link-note.component';
+//import { LinkNoteComponent } from './link-note/link-note.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,7 @@ import { LinkNoteComponent } from './link-note/link-note.component';
     TagComponent,
     ViewNoteComponent,
     AboutComponent,
-    LinkNoteComponent
+    //LinkNoteComponent
   ],
   imports: [
     BrowserModule,

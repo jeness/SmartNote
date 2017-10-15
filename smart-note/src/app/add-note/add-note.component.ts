@@ -1,9 +1,9 @@
-
 import { Router } from '@angular/router';
 import { MsgService } from '../services/msg/msg.service';
 import { Subscription } from 'rxjs/Subscription';
 import { NoteService } from '../services/note/note.service';
-import { TagDataService } from '../tag-data.service';
+//import { TagDataService } from '../tag-data.service';
+import { TagService } from '../services/tag/tag.service';
 import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { dropdownItem } from '../component/dropdown/dropdown.component';
 import { ActivatedRoute } from '@angular/router';
@@ -24,7 +24,7 @@ export class AddNoteComponent implements OnInit, OnDestroy {
   tagList = [];
   tags: Tag[]  = [];
   constructor(
-    private tagDataService: TagDataService,
+    private tagService: TagService,
     private noteService: NoteService,
     private msg: MsgService,
     private router: Router,

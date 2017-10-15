@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
 import { AddNoteComponent } from './add-note/add-note.component';
 import { TagComponent } from './tag/tag.component'
-import { ViewNoteComponent } from './view-note/view-note.component';
+//import { ViewNoteComponent } from './view-note/view-note.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
@@ -29,11 +29,11 @@ const routes: Routes = [
             notes: NotesResolver
         }
     },
-    // {
-    //     path: 'addNote',
-    //     component: AddNoteComponent,
-    //     children: []
-    //   },
+    {
+        path: 'addNote',
+        component: AddNoteComponent,
+        children: []
+      },
       {
         path: "tag",
         component: TagComponent,

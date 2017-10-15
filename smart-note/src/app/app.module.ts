@@ -13,8 +13,7 @@ import { NoteListComponent } from './note-list/note-list.component';
 import { NoteListItemComponent } from './note-list-item/note-list-item.component';
 import { NoteListFooterComponent } from './note-list-footer/note-list-footer.component';
 import { NoteDataService } from './note-data.service';
-import { TagDataService } from './tag-data.service';
-import { ApiService } from './api.service';
+//import { TagDataService } from './tag-data.service';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -31,12 +30,13 @@ import { ButtonComponent } from './component/button/button.component';
 import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-editor.directive';
 
 // service
+import { ApiService } from './api.service';
 import { LoadingBarService } from './services/loading-bar/loading-bar.service';
 import { MsgService } from './services/msg/msg.service';
 import { NoteService } from './services/note/note.service';
-//import { TagService } from './services/tag/tag.service';
+import { TagService } from './services/tag/tag.service';
 import { TagComponent } from './tag/tag.component';
-import { ViewNoteComponent } from './view-note/view-note.component';
+//import { ViewNoteComponent } from './view-note/view-note.component';
 import { AboutComponent } from './about/about.component';
 //import { LinkNoteComponent } from './link-note/link-note.component';
 
@@ -56,7 +56,7 @@ import { AboutComponent } from './about/about.component';
     ButtonComponent,
     MarkdownEditorDirective,
     TagComponent,
-    ViewNoteComponent,
+    //ViewNoteComponent,
     AboutComponent,
     //LinkNoteComponent
   ],
@@ -76,7 +76,7 @@ import { AboutComponent } from './about/about.component';
     },
     NoteDataService, ApiService,
     LoadingBarService,
-    TagDataService,
+    TagService,
     NoteService,
     MsgService,
   ],

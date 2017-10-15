@@ -12,7 +12,7 @@ import { NoteListHeaderComponent } from './note-list-header/note-list-header.com
 import { NoteListComponent } from './note-list/note-list.component';
 import { NoteListItemComponent } from './note-list-item/note-list-item.component';
 import { NoteListFooterComponent } from './note-list-footer/note-list-footer.component';
-import { NoteDataService } from './note-data.service';
+//import { NoteDataService } from './note-data.service';
 //import { TagDataService } from './tag-data.service';
 
 import { LoginComponent } from './login/login.component';
@@ -25,6 +25,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddNoteComponent } from './add-note/add-note.component';
 import { DropdownComponent } from './component/dropdown/dropdown.component';
 import { ButtonComponent } from './component/button/button.component';
+import { TagComponent } from './tag/tag.component';
 
 // directive
 import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-editor.directive';
@@ -35,7 +36,6 @@ import { LoadingBarService } from './services/loading-bar/loading-bar.service';
 import { MsgService } from './services/msg/msg.service';
 import { NoteService } from './services/note/note.service';
 import { TagService } from './services/tag/tag.service';
-import { TagComponent } from './tag/tag.component';
 //import { ViewNoteComponent } from './view-note/view-note.component';
 import { AboutComponent } from './about/about.component';
 //import { LinkNoteComponent } from './link-note/link-note.component';
@@ -74,7 +74,8 @@ import { AboutComponent } from './about/about.component';
       useClass: GlobalResponseInterceptor,
       multi: true,
     },
-    NoteDataService, ApiService,
+    //NoteDataService, ApiService,
+    NoteService, ApiService,    
     LoadingBarService,
     TagService,
     NoteService,

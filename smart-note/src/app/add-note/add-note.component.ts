@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { MsgService } from '../services/msg/msg.service';
 import { Subscription } from 'rxjs/Subscription';
-import { NoteService } from '../services/note/note.service';
+import { AddNoteService } from '../services/add-note/add-note.service';
 //import { TagDataService } from '../tag-data.service';
 import { TagService } from '../services/tag/tag.service';
 import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
@@ -24,8 +24,8 @@ export class AddNoteComponent implements OnInit, OnDestroy {
   tagList = [];
   tags: Tag[]  = [];
   constructor(
-    private tagService: TagService,
-    private noteService: NoteService,
+    private tagDataService: TagService,
+    private addNoteService: AddNoteService,
     private msg: MsgService,
     private router: Router,
     private route: ActivatedRoute        
@@ -65,7 +65,7 @@ export class AddNoteComponent implements OnInit, OnDestroy {
       if (this.title === '' || this.content === '' ) {
       this.msg.info('Please complete note information');
     } else {
-      const sub = this.noteService._addNote({
+      const sub = this.addNoteService._addNote({
         title: this.title,
         content: this.content,
         tag: this.tagList,
@@ -74,7 +74,7 @@ export class AddNoteComponent implements OnInit, OnDestroy {
       }).subscribe((res) => {
         if (res['code'] === 200) {
           this.msg.info('Successfully saved!');
-          this.noteService._updateAllNote();
+          this.addNoteService._updateAllNote();
           localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
           this.router.navigate(['/viewNote']);
         }

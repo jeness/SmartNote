@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteDataService } from '../note-data.service';
+//import { NoteDataService } from '../note-data.service';
+import { NoteService } from '../services/note/note.service';
 import { Note } from '../note';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,14 +8,16 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.css'],
-  providers: [NoteDataService]  
+  //providers: [NoteDataService] 
+  providers: [NoteService]    
 })
 
 export class NotesComponent implements OnInit {
 
   notes: Note[] = [];
   constructor(
-    private noteDataService: NoteDataService,
+    //private noteDataService: NoteDataService,
+    private noteService: NoteService,    
     private route: ActivatedRoute    
   ) {
   }
@@ -29,7 +32,7 @@ export class NotesComponent implements OnInit {
       );
   }
   onAddNote(note) {
-    this.noteDataService
+    this.noteService
       .addNote(note)
       .subscribe(
         (newNote) => {
@@ -39,7 +42,7 @@ export class NotesComponent implements OnInit {
   }
 
   onToggleNoteComplete(note) {
-    this.noteDataService
+    this.noteService
       .toggleNoteComplete(note)
       .subscribe(
         (updatedNote) => {
@@ -48,7 +51,7 @@ export class NotesComponent implements OnInit {
       );
   }
   onRemoveNote(note) {
-    this.noteDataService
+    this.noteService
       .deleteNoteById(note.id)
       .subscribe(
         (_) => {

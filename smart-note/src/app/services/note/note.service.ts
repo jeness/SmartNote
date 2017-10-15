@@ -1,46 +1,45 @@
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Note } from './../../note';
+import { ApiService } from './../../api.service';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class NoteService {
-  allNote = [];
-  allNote$ = new BehaviorSubject<Array<object>>(this.allNote);
 
   constructor(
-    private http: HttpClient
+    private api: ApiService
   ) {
-    this._updateAllNote();
   }
 
-  // add
-  _addNote(param: editNote) {
-    return this.http.post('/api/addNote', param);
+  // Simulate POST /notes
+  addNote(note: Note): Observable<Note> {
+    return this.api.createNote(note);
   }
 
-  // modify
-  _modifyNote(param: editNote) {
-    return this.http.post('/api/modify', param);
+  // Simulate DELETE /notes/:id
+  deleteNoteById(noteId: number): Observable<Note> {
+    return this.api.deleteNoteById(noteId);
   }
 
-  // delete
-  _deleteNote(id) {
-    return this.http.post('/api/deleteNote', {id: id});
+  // Simulate PUT /notes/:id
+  updatNote(note: Note): Observable<Note> {
+    return this.api.updateNote(note);
   }
 
-  _updateAllNote() {
-    this.http.get('/api/allNote')
-      .subscribe((data) => {
-        this.allNote$.next(data['data']);
-      });
+  // Simulate GET /notes
+  getAllNotes(): Observable<Note[]> {
+    return this.api.getAllNotes();
   }
-}
 
-interface editNote {
-  title: String;
-  content: String;
-  tag: Array<object>;
-  date: Date;
-  sourceLink: String;
-  _id?: String;
+  // Simulate GET /Notes/:id
+  getNoteById(noteId: number): Observable<Note> {
+    return this.api.getNoteById(noteId);
+  }
+
+  // Toggle complete
+  toggleNoteComplete(note: Note) {
+    note.complete = !note.complete;
+    return this.api.updateNote(note);
+  }
+
 }

@@ -39,7 +39,7 @@ import { TagService } from './services/tag/tag.service';
 //import { ViewNoteComponent } from './view-note/view-note.component';
 import { AboutComponent } from './about/about.component';
 //import { LinkNoteComponent } from './link-note/link-note.component';
-
+import { AddNoteService } from './services/add-note/add-note.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +78,7 @@ import { AboutComponent } from './about/about.component';
     NoteService, ApiService,    
     LoadingBarService,
     TagService,
+    AddNoteService,
     NoteService,
     MsgService,
   ],

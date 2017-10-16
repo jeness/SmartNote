@@ -23,6 +23,8 @@ import { NotesComponent } from './notes/notes.component';
 //import { TagComponent } from './tag/tag.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddNoteComponent } from './add-note/add-note.component';
+import { AddNote } from './addnote';
+
 import { DropdownComponent } from './component/dropdown/dropdown.component';
 import { ButtonComponent } from './component/button/button.component';
 import { TagComponent } from './tag/tag.component';

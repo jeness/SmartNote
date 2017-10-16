@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NotesComponent } from './notes.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { ApiMockService } from '../api-mock.service';
-import { NoteDataService } from '../note-data.service';
+import { ApiMockService } from '../services/api-mock/api-mock.service';
+import { NoteService } from '../services/note/note.service';
 import { ApiService } from '../api.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
@@ -15,7 +15,7 @@ describe('NotesComponent', () => {
     TestBed.configureTestingModule({
       declarations: [NotesComponent],
       providers: [
-        NoteDataService,
+        NoteService,
         {
           provide: ApiService,
           useClass: ApiMockService

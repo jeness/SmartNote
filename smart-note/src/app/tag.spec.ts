@@ -1,6 +1,6 @@
 import { Tag } from './tag';
 
-describe('Note', () => {
+describe('Tag', () => {
   it('should create an instance', () => {
     expect(new Tag()).toBeTruthy();
   });

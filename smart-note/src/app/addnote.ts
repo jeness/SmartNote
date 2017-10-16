@@ -1,7 +1,9 @@
-export class Note {
+import { Tag } from './tag';
+
+export class AddNote {
   id: number;
   title: string = '';
-  complete: boolean = false;
+  tag: Tag;
   content: string = ''
   
   constructor(values: Object = {}) {

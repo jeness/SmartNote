@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { dropdownItem } from '../component/dropdown/dropdown.component';
 import { ActivatedRoute } from '@angular/router';
 import { Tag } from '../tag';
-
+import { AddNote } from '../addnote';
 
 @Component({
   selector: 'app-add-note',
@@ -16,27 +16,31 @@ import { Tag } from '../tag';
   styleUrls: ['./add-note.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
+
 export class AddNoteComponent implements OnInit, OnDestroy {
   dropdownMenuSub: Subscription;
   dropdownMenu = [];
+  tagList = [];
   title = '';
   content = '';
-  tagList = [];
-  tags: Tag[]  = [];
+  //tags: Tag[]  = [];
+  addnote: AddNote[] = [];
   constructor(
-    private tagDataService: TagService,
+    private tagService: TagService,
     private addNoteService: AddNoteService,
     private msg: MsgService,
     private router: Router,
     private route: ActivatedRoute        
   ) { }
 
-  ngOnInit() {
+
+
+  public ngOnInit() {
     this.route.data
-    .map((data) => data['tags'])
+    .map((data) => data['addnote'])
     .subscribe(
-      (tags) => {
-        this.tags = tags;
+      (addnote) => {
+        this.addnote= addnote;
       }
     );
   }
@@ -53,32 +57,44 @@ export class AddNoteComponent implements OnInit, OnDestroy {
     this.tagList.splice(index, 1);
   }
 
-  markdownValueChange(data) {
-    this.content = data;
+  // markdownValueChange(data) {
+  //   this.addNoteService._getAddNoteById.
+  //   this.content = data;
+  // }
+
+  onAddNote(addnote) {
+    this.addNoteService
+      ._addNote(addnote)
+      .subscribe(
+        (newAddNote) => {
+          this.addnote= this.addnote.concat(newAddNote);
+        }
+      );
   }
 
-  // save notes
-  save() {
-    //if (this.title === '' || this.content === '' || this.tagList.length === 0) {
-      this.tagList.length = 1;
+
+  // // save notes
+  // save() {
+  //   //if (this.title === '' || this.content === '' || this.tagList.length === 0) {
+  //     this.tagList.length = 1;
       
-      if (this.title === '' || this.content === '' ) {
-      this.msg.info('Please complete note information');
-    } else {
-      const sub = this.addNoteService._addNote({
-        title: this.title,
-        content: this.content,
-        tag: this.tagList,
-        date: new Date(),
-        sourceLink: ''
-      }).subscribe((res) => {
-        if (res['code'] === 200) {
-          this.msg.info('Successfully saved!');
-          this.addNoteService._updateAllNote();
-          localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
-          this.router.navigate(['/viewNote']);
-        }
-      });
-    }
-  }
+  //     if (this.title === '' || this.content === '' ) {
+  //     this.msg.info('Please complete note information');
+  //   } else {
+  //     const sub = this.addNoteService._addNote({
+  //       title: this.title,
+  //       content: this.content,
+  //       tag: this.tagList,
+  //       date: new Date(),
+  //       sourceLink: ''
+  //     }).subscribe((res) => {
+  //       if (res['code'] === 200) {
+  //         this.msg.info('Successfully saved!');
+  //         this.addNoteService._updateAllNote();
+  //         localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
+  //         this.router.navigate(['/viewNote']);
+  //       }
+  //     });
+  //   }
+  // }
 }

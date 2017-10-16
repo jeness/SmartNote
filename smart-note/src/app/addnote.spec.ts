@@ -1,6 +1,6 @@
 import { AddNote } from './addnote';
 
-describe('Note', () => {
+describe('AddNote', () => {
   it('should create an instance', () => {
     expect(new AddNote()).toBeTruthy();
   });
@@ -8,10 +8,10 @@ describe('Note', () => {
   it('should accept values in the constructor', () => {
     let note = new AddNote({
       title: 'hello',
-      complete: true
+      //complete: true
     });
     expect(note.title).toEqual('hello');
-    expect(note.complete).toEqual(true);
+    //expect(note.complete).toEqual(true);
   });
   
   

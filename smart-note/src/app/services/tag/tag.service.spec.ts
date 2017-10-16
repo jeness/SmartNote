@@ -1,15 +1,22 @@
-// import { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
+import { TagService } from './tag.service';
+import { ApiService } from './../../api.service';
+import { ApiMockService } from './../api-mock/api-mock.service';
 
-// import { DropdownMenuListService } from './dropdown-menu-list.service';
+describe('TagService', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        TagService, 
+        {
+          provide:ApiService,
+          useClass: ApiMockService       
+        }
+      ]
+    });
+  });
 
-// describe('DropdownMenuListService', () => {
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       providers: [DropdownMenuListService]
-//     });
-//   });
-
-//   it('should be created', inject([DropdownMenuListService], (service: DropdownMenuListService) => {
-//     expect(service).toBeTruthy();
-//   }));
-// });
+  it('should be created', inject([TagService], (service: TagService) => {
+    expect(service).toBeTruthy();
+  }));
+});

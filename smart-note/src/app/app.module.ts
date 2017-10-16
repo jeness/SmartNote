@@ -40,7 +40,7 @@ import { NoteService } from './services/note/note.service';
 import { TagService } from './services/tag/tag.service';
 //import { ViewNoteComponent } from './view-note/view-note.component';
 import { AboutComponent } from './about/about.component';
-//import { LinkNoteComponent } from './link-note/link-note.component';
+import { LinkNoteComponent } from './link-note/link-note.component';
 import { AddNoteService } from './services/add-note/add-note.service';
 @NgModule({
   declarations: [
@@ -60,7 +60,7 @@ import { AddNoteService } from './services/add-note/add-note.service';
     TagComponent,
     //ViewNoteComponent,
     AboutComponent,
-    //LinkNoteComponent
+    LinkNoteComponent
   ],
   imports: [
     BrowserModule,

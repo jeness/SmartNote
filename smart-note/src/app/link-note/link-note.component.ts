@@ -1,65 +1,64 @@
+import { HttpClient } from '@angular/common/http';
+import { Subscription } from 'rxjs/Subscription';
+import { Router } from '@angular/router';
+import { MsgService } from '../services/msg/msg.service';
+import { NoteService } from '../services/note/note.service';
+import { style } from '@angular/animations';
+import { Tag } from '../tag';
+import { TagService } from '../services/tag/tag.service';
+import { LoadingBarService } from '../services/loading-bar/loading-bar.service';
+import { Component, OnInit, ViewEncapsulation, Directive, ElementRef, OnDestroy } from '@angular/core';
+import 'rxjs/add/operator/map';
+import marked from 'marked';
+import highlight from 'highlight.js';
+import { DomSanitizer } from '@angular/platform-browser';
 
+@Directive({
+  selector: '[previewHeight]'
+})
+export class CalculationContentHeightDirective {
+  constructor(
+    el: ElementRef
+  ) {
+    el.nativeElement.style.height = window.innerHeight - 170 + 'px';
+    el.nativeElement.style.maxHeight = window.innerHeight - 170 + 'px';
+    el.nativeElement.style.overflow = 'auto';
+  }
+}
 
-// import { HttpClient } from '@angular/common/http';
-// import { Subscription } from 'rxjs/Subscription';
-// import { Router } from '@angular/router';
-// import { MsgService } from '../services/msg/msg.service';
-// import { NoteService } from '../services/note/note.service';
-// import { style } from '@angular/animations';
-// import { TagService } from '../services/tag/tag.service';
-// import { LoadingBarService } from '../services/loading-bar/loading-bar.service';
-// import { Component, OnInit, ViewEncapsulation, Directive, ElementRef, OnDestroy } from '@angular/core';
-// import 'rxjs/add/operator/map';
-// import marked from 'marked';
-// import highlight from 'highlight.js';
-// import { DomSanitizer } from '@angular/platform-browser';
+@Component({
+  selector: 'app-link-note',
+  templateUrl: './link-note.component.html',
+  styleUrls: ['./link-note.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+export class LinkNoteComponent implements OnInit, OnDestroy {
+  dropdownMenuSub: Subscription;
+  isShowMarkdownEditor = false;
+  dropdownMenu = [];
+  labelList = [];
+  noteTitle = '';
+  noteContent = '';
+  sourceLink = '';
+  constructor(
+    private tagService: TagService,
+    private loadingBar: LoadingBarService,
+    private http: HttpClient,
+    private sanitizer: DomSanitizer,
+    private noteService: NoteService,
+    private msg: MsgService,
+    private router: Router
+  ) { }
 
-// @Directive({
-//   selector: '[previewHeight]'
-// })
-// export class CalculationContentHeightDirective {
-//   constructor(
-//     el: ElementRef
-//   ) {
-//     el.nativeElement.style.height = window.innerHeight - 170 + 'px';
-//     el.nativeElement.style.maxHeight = window.innerHeight - 170 + 'px';
-//     el.nativeElement.style.overflow = 'auto';
-//   }
-// }
+  ngOnInit() {
+    // this.dropdownMenuSub = this.tagService.tagList$.subscribe((data) => {
+    //   this.dropdownMenu = data;
+    // });
+  }
 
-// @Component({
-//   selector: 'app-link-note',
-//   templateUrl: './link-note.component.html',
-//   styleUrls: ['./link-note.component.scss'],
-//   encapsulation: ViewEncapsulation.None
-// })
-// export class LinkNoteComponent implements OnInit, OnDestroy {
-//   dropdownMenuSub: Subscription;
-//   isShowMarkdownEditor = false;
-//   dropdownMenu = [];
-//   labelList = [];
-//   noteTitle = '';
-//   noteContent = '';
-//   sourceLink = '';
-//   constructor(
-//     private tagService: TagService,
-//     private loadingBar: LoadingBarService,
-//     private http: HttpClient,
-//     private sanitizer: DomSanitizer,
-//     private noteService: NoteService,
-//     private msg: MsgService,
-//     private router: Router
-//   ) { }
-
-//   ngOnInit() {
-//     this.dropdownMenuSub = this.tagService.tagList$.subscribe((data) => {
-//       this.dropdownMenu = data;
-//     });
-//   }
-
-//   ngOnDestroy() {
-//     this.dropdownMenuSub.unsubscribe();
-//   }
+  ngOnDestroy() {
+    //this.dropdownMenuSub.unsubscribe();
+  }
 
 //   onEnter(value) {
 //     this.sourceLink = value;
@@ -115,4 +114,4 @@
 //   cancel() {
 //     this.isShowMarkdownEditor = false;
 //   }
-// }
+}

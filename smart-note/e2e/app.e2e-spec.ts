@@ -1,10 +1,10 @@
-import { AppPage } from './app.po';
+import { SmartNote } from './app.po';
 
 describe('smart-note App', () => {
-  let page: AppPage;
+  let page: SmartNote;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new SmartNote();
   });
 
   it('should display welcome message', () => {

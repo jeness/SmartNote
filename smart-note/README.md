@@ -38,3 +38,20 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Screenshots
+
+### Login
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/login%20in.png)
+
+### Todo
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/todo.png)
+
+### Markdown Note
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/markdown%20note.png)
+
+### Tag
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/tag.png)
+
+### About
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/about.png)

@@ -25,3 +25,19 @@ Sharing: Share your knowledge, thoughts and experiences with friends via Leanote
 5. Start taking notes and try all the functionalities there.
 6. You can check GET, PUT, DELETE, POST requests from the terminal opened in step 3.
     
+# Screenshots
+
+### Login
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/login%20in.png)
+
+### Todo
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/todo.png)
+
+### Markdown Note
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/markdown%20note.png)
+
+### Tag
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/tag.png)
+
+### About
+![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/about.png)

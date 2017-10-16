@@ -47,7 +47,7 @@ export class AddNoteComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.dropdownMenuSub.unsubscribe();
+    //this.dropdownMenuSub.unsubscribe();
   }
 
   selectItem(data) {

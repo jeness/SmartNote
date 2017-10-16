@@ -23,8 +23,10 @@ export class AddNoteComponent implements OnInit, OnDestroy {
   tagList = [];
   title = '';
   content = '';
+  //date: Date;
   //tags: Tag[]  = [];
   addnote: AddNote[] = [];
+  newAddNote: AddNote = new AddNote();
   constructor(
     private tagService: TagService,
     private addNoteService: AddNoteService,
@@ -36,49 +38,89 @@ export class AddNoteComponent implements OnInit, OnDestroy {
 
 
   public ngOnInit() {
-    this.route.data
-    .map((data) => data['addnote'])
-    .subscribe(
-      (addnote) => {
-        this.addnote= addnote;
-      }
-    );
+    // this.route.data
+    // .map((data) => data['addnote'])
+    // .subscribe(
+    //   (addnote) => {
+    //     this.addnote= addnote;
+    //   }
+    // );
   }
 
   ngOnDestroy() {
     this.dropdownMenuSub.unsubscribe();
   }
 
-  selectItem(data) {
-    this.tagList.push(data);
-  }
+  // selectItem(data) {
+  //   this.tagList.push(data);
+  // }
 
-  delectLabelItem(index) {
-    this.tagList.splice(index, 1);
-  }
+  // delectLabelItem(index) {
+  //   this.tagList.splice(index, 1);
+  // }
 
   // markdownValueChange(data) {
-  //   this.addNoteService._getAddNoteById.
+  //   //this.addNoteService._getAddNoteById.
   //   this.content = data;
   // }
 
-  onAddNote(addnote) {
-    this.addNoteService
-      ._addNote(addnote)
-      .subscribe(
-        (newAddNote) => {
-          this.addnote= this.addnote.concat(newAddNote);
-        }
-      );
-  }
+  // onAddNote(addnote) {
+  //   this.addNoteService
+  //     ._addNote(addnote)
+  //     .subscribe(
+  //       (newAddNote) => {
+  //         this.addnote= this.addnote.concat(newAddNote);
+  //       }
+  //     );
+  // }
 
+  //   // save notes
+  //   save() {
+  //     // if (this.title === '' || this.content === '' || this.tagList.length === 0) {
+  //     //   // this.tagList.length = 1;
+  //     //   // if (this.title === '' || this.content === '' ) {
+  //     //   this.msg.info('Please complete note information');
+  //     // } else {
+  //       this.addNoteService.
+  //       _addNote(this.newAddNote)
+  //       .subscribe(
+  //         (newAddNote) => {
+  //           if (newAddNote.title !== '') {
+  //             this.addnote = this.addnote.concat(newAddNote);
+            
+  //           this.msg.info('Successfully saved!');
+  //           //this.addNoteService._updateAllNote();
+  //           //localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
+  //           this.router.navigate(['/about']);
+  //         }
+  //         else
+  //         {
+  //           this.msg.info('Cannot saved!');
+  //         }
+  //       //});
+  //     }
+  //   );
+  // }
 
+  
+    // addTag() {
+    //   this.tagService
+    //   .addTag(this.newTag)
+    //   .subscribe(
+    //     (newTag) => {
+    //       if (newTag.title !== '') {
+    //         this.tagList = this.tagList.concat(newTag);
+    //         this.newTag.title = '';          
+    //       } else {
+    //         this.msg.info('Invalid tag, please input something');
+    //       }
+    //     }
+    //   );
   // // save notes
   // save() {
-  //   //if (this.title === '' || this.content === '' || this.tagList.length === 0) {
-  //     this.tagList.length = 1;
-      
-  //     if (this.title === '' || this.content === '' ) {
+  //   if (this.title === '' || this.content === '' || this.tagList.length === 0) {
+  //     // this.tagList.length = 1;
+  //     // if (this.title === '' || this.content === '' ) {
   //     this.msg.info('Please complete note information');
   //   } else {
   //     const sub = this.addNoteService._addNote({

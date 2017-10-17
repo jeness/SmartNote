@@ -1,3 +1,6 @@
+Master branch has the new server with old server. Have no idea how to delete.
+Server branch has the old server. Just keep it for future use.
+
 # SmartNote
 This project will have the following features.
 

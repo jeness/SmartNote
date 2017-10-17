@@ -20,20 +20,30 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
+
   }
 
   login() {
-    //this.router.navigate(['/home']);
     //$(function(){alert('Hello');});
-  this.http.post('http://localhost:3000/todos',
-  JSON.stringify({
-     username:this.name, 
-     password:this.pwd
-  })).subscribe(
-  data => {
-    alert(this.name);},
-  error => {
-    console.log(JSON.stringify(error.json()));})
-  }
+    // var jname = document.getElementById("name");
+    // var jpwd = document.getElementById("pwd");
+    // console.log(jname);
+    // console.log(jpwd);
+
+    var user = JSON.stringify({
+      username:this.name, 
+      password:this.pwd
+   });
+   if(user.length<30){
+     alert("Invalid user infomation!")
+    } else{
+        this.http.post('http://localhost:3000/todos',user).subscribe(
+        data => {
+          //alert(this.name);
+          this.router.navigate(['http://localhost:4200/notes'])
+        },
+        error => {
+          console.log(JSON.stringify(error.json()));})
+        }
+    }
 }

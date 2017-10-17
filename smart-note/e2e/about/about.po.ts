@@ -20,7 +20,9 @@ export class About {
   }
  
   getAppDetails() {
-    return element(by.css('.profile-card.profile-bio p')).getText();
+    return element(by.css('.profile-card.profile-bio > p')).getText();
   }
-
+  // getAppDetails() {
+  //   return element(by.css('.profile-bio p')).getText();
+  // }
 }

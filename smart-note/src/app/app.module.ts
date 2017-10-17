@@ -63,6 +63,7 @@ import { AddNoteService } from './services/add-note/add-note.service';
     LinkNoteComponent
   ],
   imports: [
+    //RouterModule,
     BrowserModule,
     HttpClientModule, 
     FormsModule,

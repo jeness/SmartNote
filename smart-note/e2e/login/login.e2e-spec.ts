@@ -6,7 +6,7 @@ function sleep() {
     browser.driver.sleep(1500); 
   }
 
-describe('SmartNote App', () => {
+describe('Login page', () => {
   let page: Login;
 
   beforeEach(() => {

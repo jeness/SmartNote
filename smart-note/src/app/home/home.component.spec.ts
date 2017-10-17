@@ -5,7 +5,6 @@ import { ApiMockService } from '../services/api-mock/api-mock.service';
 import { NoteService } from '../services/note/note.service';
 import { ApiService } from '../api.service';
 import { HomeComponent } from './home.component';
-//import { Note } from '../note';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

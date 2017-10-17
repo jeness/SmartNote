@@ -4,6 +4,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpModule } from '@angular/http';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -11,7 +12,7 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],      
+      imports: [RouterTestingModule, HttpModule],      
       declarations: [ LoginComponent ],
       schemas: [
         NO_ERRORS_SCHEMA

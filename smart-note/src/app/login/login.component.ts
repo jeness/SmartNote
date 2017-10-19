@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { MsgService } from './../services/msg/msg.service';
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,6 +15,8 @@ export class LoginComponent implements OnInit {
   pwd = '';
 
   constructor(
+    private http: HttpClient,
+    private msg: MsgService,
     private router: Router,
   ) { }
 
@@ -20,6 +25,17 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/home']);
+    // this.router.navigate(['/home']);
+    this.http.post('/api/login', {
+      name: this.name,
+      pwd: this.pwd
+    }).subscribe((res) => {
+      if (res['code'] !== 200) {
+        this.msg.info( res['msg'] );
+      } else {
+        this.router.navigate(['/addLinkNote']);
+        localStorage.setItem('userName', this.name);
+      }
+    });
   }
 }

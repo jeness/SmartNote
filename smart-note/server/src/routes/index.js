@@ -5,6 +5,7 @@ const path = require('path')
 const Models = require('../models')
 const phantom = require('phantom')
 const users = require('../users').items
+// const users
 
 const resolve = file => path.resolve(__dirname, file)
 const router = new Router()

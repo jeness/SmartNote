@@ -39,5 +39,5 @@ app.use(bodyParser())
 app.use(router.routes())
 
 app.listen(config.port || 3001, ()=> {
-  console.log('Server is listening Port' + config.port || 3001)
+  console.log('Server is listening Port ' + config.port || 3001)
 })

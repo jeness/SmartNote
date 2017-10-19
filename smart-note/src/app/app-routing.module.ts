@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AppComponent } from './app.component';
 import { NotesResolver } from './notes.resolver';
 import { AddNoteComponent } from './add-note/add-note.component';
-import { TagComponent } from './tag/tag.component'
+import { TagComponent } from './tag/tag.component';
 import { LinkNoteComponent } from './link-note/link-note.component';
 import { AboutComponent } from './about/about.component';
 
@@ -37,7 +37,7 @@ const routes: Routes = [
       {
         path: "tag",
         component: TagComponent,
-        children: []        
+        children: []
       },
     {
         path: 'linkNote',
@@ -48,7 +48,6 @@ const routes: Routes = [
         path: 'about', 
         component: AboutComponent 
     },
-      
     {
         path: "home",
         redirectTo: "notes",

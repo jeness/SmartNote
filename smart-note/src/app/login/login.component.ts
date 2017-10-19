@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { NgModule, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
 import { MsgService } from './../services/msg/msg.service';
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private msg: MsgService,
     private router: Router,
+    private http: Http
   ) { }
 
   ngOnInit() {

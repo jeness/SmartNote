@@ -1,7 +1,7 @@
 import { GlobalResponseInterceptor } from './interceptor/global-response-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -63,6 +63,7 @@ import { AddNoteService } from './services/add-note/add-note.service';
     LinkNoteComponent
   ],
   imports: [
+    //RouterModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,

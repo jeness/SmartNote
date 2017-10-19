@@ -3,7 +3,7 @@ import { MsgService } from '../services/msg/msg.service';
 import { Subscription } from 'rxjs/Subscription';
 import { AddNoteService } from '../services/add-note/add-note.service';
 import { TagService } from '../services/tag/tag.service';
-import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnDestroy, Input } from '@angular/core';
 import { dropdownItem } from '../component/dropdown/dropdown.component';
 import { ActivatedRoute } from '@angular/router';
 import { Tag } from '../tag';
@@ -22,8 +22,9 @@ export class AddNoteComponent implements OnInit, OnDestroy {
   tagList = [];
   title = '';
   content = '';
-  //date: Date;
-  //tags: Tag[]  = [];
+  // @Input() title: string;
+  // @Input() content: string;
+
   addnote: AddNote[] = [];
   newAddNote: AddNote = new AddNote();
   constructor(

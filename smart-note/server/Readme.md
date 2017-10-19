@@ -16,7 +16,7 @@ Back end of Smartnote, including request from front end, route, database operati
 - mongodb create a new database named node-login (to store user info of Smartnote) and run mongodb;
 - npm install
 - under the SmartNote file, enter /server(cd server)
-- npm run dev
+- (under SmartNote/server)npm run dev
 
 
 ##Run with front end

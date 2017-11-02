@@ -1,35 +1,43 @@
 .classification-wrap{
-  margin: 0 3rem;
+  margin: 0 2rem;
   padding: 1rem;
+  .note-name{
+    //border-bottom: 1px solid #94618e;
+    padding-bottom: 3vh;
+    font-size: 25px;
+    margin-top: 2rem;
+    color: #94618e;
+  }
 
   .tabs{
     max-width: 100%;
     overflow: auto;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #94618e;
     display: flex;
     &::-webkit-scrollbar{
       width: 0px;
       height: 0px;
     };
     li{
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.5;
       padding: 10px 15px;
       text-align: center;
       cursor: pointer;
-      color: #919191;
+      color: #404040;
       white-space: nowrap;
       &:hover{
-        color: #404040;
+        color: #94618e;
       }
     };
     .tab-active{
-      border-bottom: 2px solid #ccc;
-      color: #404040;
+      border-bottom: 3px solid #94618e;
+      color: #94618e;
     }
   };
 
   .tab-content{
+    margin-top: 1rem;
     transition: opacity 1s;
     display: flex;
     flex-wrap: wrap;
@@ -41,16 +49,16 @@
     }
     .note-item{
       width: 28%;
-      height: 180px;
+      height: 150px;
       background-color: #fff;
-      box-shadow: 0 1px 6px #ccc;
+      box-shadow: 0 1px 6px #94618e;
       border-radius: 3px;
       margin: 1% 1%;
       padding: 1%;
       text-align: center;
       .title{
         font-size: 16px;
-        color: #484848;
+        color: #49274a;
         cursor: pointer;
         height: 24px;
         max-height: 24px;
@@ -59,10 +67,10 @@
         text-overflow: ellipsis;
       }
       .date{
-        color: #aaa;
+        color: #94618e;
         font-size: 12px;
         padding: 10px 0;
-        border-bottom: 1px dashed #ddd;
+        border-bottom: 1px dashed #94618e;
       }
       .content{
         text-align: left;

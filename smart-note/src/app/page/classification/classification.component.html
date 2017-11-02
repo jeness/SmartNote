@@ -1,6 +1,9 @@
 <div class="classification-wrap">
+    <div class="note-name">
+        Archived Notes：Notes classified by Tag.
+      </div>
   <ul class="tabs">
-    <li [class.tab-active]="tabIsActive" (click)="all()">全部</li>
+    <li [class.tab-active]="tabIsActive" (click)="all()">All</li>
     <li *ngFor="let item of tagList; let i=index" (click)="tabClick(item)" [class.tab-active]="item.tabIsActive">
       {{item.name}}
     </li>

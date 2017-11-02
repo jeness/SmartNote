@@ -1,75 +1,59 @@
 import { GlobalResponseInterceptor } from './interceptor/global-response-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-import { NoteListHeaderComponent } from './note-list-header/note-list-header.component';
-import { NoteListComponent } from './note-list/note-list.component';
-import { NoteListItemComponent } from './note-list-item/note-list-item.component';
-import { NoteListFooterComponent } from './note-list-footer/note-list-footer.component';
-//import { NoteDataService } from './note-data.service';
-//import { TagDataService } from './tag-data.service';
-
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { RouterModule } from "@angular/router";
+// customize module
 import { AppRoutingModule } from './app-routing.module';
-import { NotesComponent } from './notes/notes.component';
-//import { TagComponent } from './tag/tag.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AddNoteComponent } from './add-note/add-note.component';
-import { AddNote } from './addnote';
 
+// component
+import { AppComponent } from './app.component';
+import { AddNoteComponent } from './page/add-note/add-note.component';
+import { AddLinkNoteComponent, CalculationContentHeightDirective } from './page/add-link-note/add-link-note.component';
+import { SearchComponent } from './page/search/search.component';
+import { IndexComponent } from './page/index/index.component';
 import { DropdownComponent } from './component/dropdown/dropdown.component';
 import { ButtonComponent } from './component/button/button.component';
-import { TagComponent } from './tag/tag.component';
+import { ClassificationComponent, ClassificationTabsContentHeightDirective, FilterNoteContentPipe } from './page/classification/classification.component';
+import { ViewNoteComponent } from './page/view-note/view-note.component';
+import { EditNoteComponent } from './page/edit-note/edit-note.component';
+import { TagComponent } from './page/tag/tag.component';
 
 // directive
 import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-editor.directive';
 
 // service
-import { ApiService } from './api.service';
 import { LoadingBarService } from './services/loading-bar/loading-bar.service';
 import { MsgService } from './services/msg/msg.service';
 import { NoteService } from './services/note/note.service';
 import { TagService } from './services/tag/tag.service';
-//import { ViewNoteComponent } from './view-note/view-note.component';
-import { AboutComponent } from './about/about.component';
-import { LinkNoteComponent } from './link-note/link-note.component';
-import { AddNoteService } from './services/add-note/add-note.service';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NoteListComponent,
-    NoteListHeaderComponent,
-    NoteListItemComponent,
-    NoteListFooterComponent,
-    LoginComponent,
-    HomeComponent,
-    NotesComponent,
-    PageNotFoundComponent,
     AddNoteComponent,
+    AddLinkNoteComponent,
+    SearchComponent,
+    IndexComponent,
+    MarkdownEditorDirective,
+    CalculationContentHeightDirective,
+    ClassificationTabsContentHeightDirective,
     DropdownComponent,
     ButtonComponent,
-    MarkdownEditorDirective,
     TagComponent,
-    //ViewNoteComponent,
-    AboutComponent,
-    LinkNoteComponent
+    ClassificationComponent,
+    ViewNoteComponent,
+    EditNoteComponent,
+    FilterNoteContentPipe,
   ],
   imports: [
-    //RouterModule,
     BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    HttpModule,
-    AppRoutingModule,
-    // BrowserAnimationsModule,
+    HttpClientModule,  // http模块
+    FormsModule, // 表单模块
+    AppRoutingModule, // 路由配置模块
+    BrowserAnimationsModule, // 动画模块
   ],
   providers: [
     {
@@ -77,16 +61,12 @@ import { AddNoteService } from './services/add-note/add-note.service';
       useClass: GlobalResponseInterceptor,
       multi: true,
     },
-    //NoteDataService, ApiService,
-    NoteService, ApiService,    
     LoadingBarService,
     TagService,
-    AddNoteService,
     NoteService,
     MsgService,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent], // 根组件
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule {
-}
+export class AppModule { }

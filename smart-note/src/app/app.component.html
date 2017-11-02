@@ -1,58 +1,52 @@
-<!--<router-outlet></router-outlet>-->
 <div class="left-menu">
-    <ul>
-      <li class="logo">
-        <a [routerLink]="['/about']" [routerLinkActive]="['.router-active']">
-          <img src="../assets/icons8-Pen.png" width="35" height="35">
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/notes']" routerLinkActive="router-active">
-          <div class="ion-edit icon"></div>Todo
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/linkNote']" routerLinkActive="router-active">
-          <div class="ion-usb icon"></div>URL note
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/addNote']" routerLinkActive="router-active">
-          <div class="ion-edit icon"></div>Add note
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/tag']" routerLinkActive="router-active">
-          <div class="ion-bookmark icon"></div>Tag
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/classification']" routerLinkActive="router-active">
-          <div class="ion-document-text icon"></div>Archive
-        </a>
-      </li>
-      <li>
-        <a [routerLink]="['/search']" routerLinkActive="router-active">
-          <div class="ion-android-search icon"></div>Search
-        </a>
-      </li>
-      <li class="personal-center">
-        <a class="ion-navicon" (click)="personalCenter($event)"></a>
-      </li>
-      <li class="personal-center-content" (click)="personalCenterContent($event)" *ngIf="isShowAccount">
-        <div class="title">
-          <i class="ion-happy-outline"></i>
-          <div>
-            {{userName}}
-          </div>
+  <ul>
+    <li class="logo">
+      <a [routerLink]="['/addLinkNote']" [routerLinkActive]="['.router-active']">
+        <img src="../assets/index.svg" width="35" height="35">
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/addLinkNote']" routerLinkActive="router-active">
+        <div class="ion-usb icon"></div>链接
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/addNote']" routerLinkActive="router-active">
+        <div class="ion-edit icon"></div>新增
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/tag']" routerLinkActive="router-active">
+        <div class="ion-bookmark icon"></div>标签
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/classification']" routerLinkActive="router-active">
+        <div class="ion-document-text icon"></div>归档
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/search']" routerLinkActive="router-active">
+        <div class="ion-android-search icon"></div>搜索
+      </a>
+    </li>
+    <li class="personal-center">
+      <a class="ion-navicon" (click)="personalCenter($event)"></a>
+    </li>
+    <li class="personal-center-content" (click)="personalCenterContent($event)" *ngIf="isShowAccount">
+      <div class="title">
+        <i class="ion-happy-outline"></i>
+        <div>
+          {{userName}}
         </div>
-        <div class="logout" (click)="logout()">
-          <span class="ion-android-exit"></span>
-          Sign out
-        </div>
-      </li>
-    </ul>
-  </div>
+      </div>
+      <div class="logout" (click)="logout()">
+        <span class="ion-android-exit"></span>
+        退出登录
+      </div>
+    </li>
+  </ul>
+</div>
 <div class="content-wrap">
-    <router-outlet></router-outlet>
-  </div> 
+  <router-outlet></router-outlet>
+</div>

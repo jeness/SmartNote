@@ -1,31 +1,47 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Tag } from './../../tag';
-import { ApiService } from './../../api.service';
-import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class TagService {
+  tagList = [];
+  tagList$ = new BehaviorSubject<Array<object>>(this.tagList);
 
   constructor(
-    private api: ApiService
+    private http: HttpClient
   ) {
+    this._updateTagList();
   }
 
-  // Simulate GET /tags
-  getAllTags(): Observable<Tag[]> {
-    return this.api.getAllTags();
-  }
-  // Simulate POST /tags
-  addTag(tag: Tag): Observable<Tag> {
-    return this.api.createTag(tag);
+  // 新增
+  _addTag(name: String) {
+    this.http.post('/api/addTag', {
+      name: name
+    })
+    .subscribe((data) => {
+      this._updateTagList();
+    });
   }
 
-  // Simulate DELETE /tags/:id
-  deleteTagById(tagId: number): Observable<Tag> {
-    return this.api.deleteTagById(tagId);
+  // 删除
+  _deleteTag(id) {
+    this.http.post('/api/deleteTag', {
+      id: id
+    }).subscribe((data) => {
+        this._updateTagList();
+      });
   }
+
+  // 获取整个列表
+  _getTagList() {
+    return this.http.get('/api/TagList');
+  }
+
+  _updateTagList() {
+    this.http.get('/api/TagList')
+      .subscribe((res) => {
+        this.tagList$.next(res['data']);
+      });
+  }
+
 }
-
-
-
-

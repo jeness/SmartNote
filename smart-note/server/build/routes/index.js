@@ -47,10 +47,10 @@ router.post('/api/login', function () {
 
 							session.isLogin = true;
 							session.userName = ctx.request.body.name;
-							successState.msg = '登录成功！';
+							successState.msg = 'Successfully Login!';
 							ctx.body = successState;
 						} else {
-							errorState.msg = '账号或密码错误！';
+							errorState.msg = 'Incorrect account or password!';
 							errorState.code = 400;
 							ctx.body = errorState;
 						}

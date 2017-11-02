@@ -1,34 +1,50 @@
-Master branch has the new server with old server. Have no idea how to delete.
-Server branch has the old server. Just keep it for future use.
-
 # SmartNote
-This project will have the following features.
 
-Note-taking made easy: SmartNote incorporates a clean and intuitive interface, the TinyMCE rich-text editor and a dedicated markdown editor, making your writing/typing more efficient and enjoyable. This will greatly benefit programmer. You never need to bother about format changing when copy and paste code in your old-style notebook. Programmers should make programmers' life easier.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
-Knowledge management: The flexible and versatile notebook-note-tagging system of SmartNote makes it an ideal tool for knowledge management
+## Development 
 
-Sharing: Share your knowledge, thoughts and experiences with friends via Leanote. Invite your friends to join your notepad in the cloud.
+Before run our application, you need to install mongodb. 
 
-# Tools Needed
-1. Node.js for installing json-server
-    <br/> npm install -g json-server<br/>
-2.  Angular CLI to automate the development workflow.
-     <br/> npm install -g @angular/cli<br/>
-        
-# How To Run The Application 
-0. Open the project in Visual Studio Code.
-1. Open the integrated terminal using ctrl + `(the backtick located on the same key as ~)and navigate root of the application.
-2. Run the following command to build the application and start a web serve. http://localhost:4200/login will be loaded automatically.
-    <br/>ng serve -o<br/>
-3. Open a new terminal to set up a mock back-end.
-    <br/>npm run json-server<br/>
-   We now have a REST API listening on port 3000.
-4. Go to the application login page opened in step 2 at http://localhost:4200/login and enter username and password.
-5. Start taking notes and try all the functionalities there.
-6. You can check GET, PUT, DELETE, POST requests from the terminal opened in step 3.
-    
-# Screenshots
+Run `mongod` to start the service after installation.
+
+Run `npm run start` to start the application. Navigate to `http://localhost:4300/`. The app will automatically reload if you change any of the source files.
+
+For Server part, go to folder server by `cd server/`.
+Run `npm install` and `npm run dev`.
+
+
+## Dependencies
+For markdown directives, you need to install some libraries.
+
+Install SimpleDEM and Highlight for markdown note features.
+
+Run `npm install simplemde --save` and `npm install angular-highlightjs --save`.
+
+Run `npm install nodemon --save`
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Screenshots
 
 ### Login
 ![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/login%20in.png)
@@ -44,3 +60,4 @@ Sharing: Share your knowledge, thoughts and experiences with friends via Leanote
 
 ### About
 ![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/about.png)
+

@@ -1,3 +1,6 @@
+# SmartNote
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 ![](https://github.com/Shanfang/SmartNote/blob/master/smart-note/src/assets/icons8-Pen.png)
 
@@ -15,9 +18,6 @@ SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Gr
 - URL notes: generate note from URL automatically.
 - Archive note: view all archived notes.
 
-# SmartNote
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 ## Development 
 

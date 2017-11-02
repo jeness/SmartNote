@@ -1,11 +1,9 @@
 'use strict';
 
-/**
- * 生产环境的配置内容
- */
+
 
 module.exports = {
-  env: 'production', //环境名称
-  port: 3001, //服务端口号
-  mongodb_url: 'mongodb://localhost:27017/microPro' //数据库地址
+  env: 'production', //ENVIRONMENT NAME
+  port: 3001, //SERVER PORT NUMBER
+  mongodb_url: 'mongodb://localhost:27017/microPro' //DATABASE Address
 };

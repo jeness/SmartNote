@@ -22,12 +22,12 @@ app.use(staticCache({
 }));
 
 var cookie = {
-  maxAge: 5 * 60 * 1000, // cookie有效时长
-  expires: '', // cookie失效时间
-  path: '', // 写cookie所在的路径
-  domain: '', // 写cookie所在的域名
-  httpOnly: true, // 是否只用于http请求中获取
-  overwrite: '', // 是否允许重写
+  maxAge: 5 * 60 * 1000, // cookie workable time
+  expires: '', // cookie expires time
+  path: '', // cookie path
+  domain: '', // cookie domain
+  httpOnly: true, // verify if only use http get
+  overwrite: '', // verify if allow overwrite
   secure: '',
   sameSite: '',
   signed: ''
@@ -43,6 +43,6 @@ app.use(bodyParser());
 app.use(router.routes());
 
 app.listen(config.port || 3001, function () {
-  console.log('监听端口' + config.port || 3001);
-  console.log("环境变量是" + process.env.NODE_ENV);
+  console.log('Listening port' + config.port || 3001);
+  console.log("Environment variables" + process.env.NODE_ENV);
 });

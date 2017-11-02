@@ -80,10 +80,10 @@ export class AddLinkNoteComponent implements OnInit, OnDestroy {
     });
   }
 
-  // 保存笔记
+  // Save
   save() {
      if (this.noteTitle === '' || this.noteContent === '' || this.labelList.length === 0) {
-      this.msg.info('请输入完整的笔记信息！');
+      this.msg.info('Please complete note info！');
     } else {
       const sub = this.noteService._addNote({
         title: this.noteTitle,
@@ -93,7 +93,7 @@ export class AddLinkNoteComponent implements OnInit, OnDestroy {
         sourceLink: this.sourceLink
       }).subscribe((res) => {
         if (res['code'] === 200) {
-          this.msg.info('保存成功！');
+          this.msg.info('Successfully Saved！');
           this.noteService._updateAllNote();
           localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
           this.router.navigate(['/viewNote']);

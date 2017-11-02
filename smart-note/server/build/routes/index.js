@@ -15,12 +15,12 @@ var resolve = function resolve(file) {
 };
 var router = new Router();
 
-// 定义成功的返回模板
+// define success template
 var successState = {
 	msg: 'success',
 	code: 200,
 	data: ''
-	// 定义错误的返回模板
+	// define failed template
 };var errorState = {
 	msg: 'error',
 	code: '',
@@ -78,7 +78,7 @@ router.get('/api/logout', function () {
 						ctx.session = null;
 						success = Object.assign({}, successState, {
 							code: 200,
-							msg: '退出登录成功！'
+							msg: 'Sucessfully Sign Out！'
 						});
 
 						ctx.response.body = success;
@@ -97,7 +97,7 @@ router.get('/api/logout', function () {
 }());
 
 /**
- * 笔记 C、R、U、D
+ * Note C、R、U、D
  */
 
 router.get('/api/allNote', function () {
@@ -150,7 +150,7 @@ router.get('/api/allNote', function () {
 	};
 }());
 
-// 生成笔记
+// generate note
 router.post('/api/generateNote', function () {
 	var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(ctx, next) {
 		var instance, page, status, content, error;
@@ -228,7 +228,7 @@ router.post('/api/generateNote', function () {
 	};
 }());
 
-// 新增笔记
+// add note
 router.post('/api/addNote', function () {
 	var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(ctx, next) {
 		var error;
@@ -277,7 +277,7 @@ router.post('/api/addNote', function () {
 	};
 }());
 
-// 删除笔记
+// delete note
 router.post('/api/deleteNote', function () {
 	var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(ctx, next) {
 		var error;
@@ -328,7 +328,7 @@ router.post('/api/deleteNote', function () {
 	};
 }());
 
-// 修改笔记
+// modify note
 router.post('/api/modify', function () {
 	var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(ctx, next) {
 		var error;
@@ -384,7 +384,7 @@ router.post('/api/modify', function () {
 }());
 
 /**
- * 标签 C、R、U、D
+ * Label C、R、U、D
  */
 
 router.post('/api/addTag', function () {

@@ -2,8 +2,7 @@ import { Router } from '@angular/router';
 import { MsgService } from './services/msg/msg.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, DoCheck } from '@angular/core';
-// import { routeAnimation } from './animations/global-router-animation';
-
+import { routeAnimation } from './animations/global-router-animation';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +10,8 @@ import { Component, DoCheck } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   host: {
     '(document:click)': 'documentClick($event)',
-  },
-  providers: []
+  }
 })
-
 export class AppComponent implements DoCheck {
   isShowAccount = false;
   userName = '';
@@ -25,6 +22,7 @@ export class AppComponent implements DoCheck {
     private router: Router
   ) {
   }
+
   ngDoCheck() {
     this.userName = localStorage.getItem('userName');
   }

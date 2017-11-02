@@ -9,13 +9,13 @@ const users = require('../users').items
 const resolve = file => path.resolve(__dirname, file)
 const router = new Router()
 
-// 定义成功的返回模板
+// define success template
 let successState = {
 	msg: 'success',
 	code: 200,
 	data: ''
 }
-// 定义错误的返回模板
+// define failed template
 let errorState = {
 	msg: 'error',
 	code: '',
@@ -34,10 +34,10 @@ router.post('/api/login', async (ctx, next) => {
 		let session = ctx.session
 		session.isLogin = true
 		session.userName = ctx.request.body.name
-		successState.msg = '登录成功！'
+		successState.msg = 'Successfully Login!'
 		ctx.body = successState
 	}else{
-		errorState.msg = '账号或密码错误！'
+		errorState.msg = 'Incorrect account or password!'
 		errorState.code = 400
 		ctx.body = errorState
 	}
@@ -47,14 +47,14 @@ router.get('/api/logout', async (ctx, next) => {
 	ctx.session = null;
 	let success = Object.assign({}, successState, {
 		code: 200,
-		msg: '退出登录成功！'
+		msg: 'Sucessfully Sign Out!'
 	})
 	ctx.response.body = success
 })
 
 
 /**
- * 笔记 C、R、U、D
+ * note C、R、U、D
  */
 
 router.get('/api/allNote', async (ctx, next) => {
@@ -79,7 +79,7 @@ router.get('/api/allNote', async (ctx, next) => {
 	}
 })
 
-// 生成笔记
+// generate note
 router.post('/api/generateNote', async (ctx, next) => {
 	if ( ctx.session && ctx.session.isLogin && ctx.session.userName ) {
 		const instance = await phantom.create()
@@ -110,7 +110,7 @@ router.post('/api/generateNote', async (ctx, next) => {
 	}
 })
 
-// 新增笔记
+// add note
 router.post('/api/addNote', async (ctx, next) => {
 	if ( ctx.session && ctx.session.isLogin && ctx.session.userName ) {
 		ctx.request.body['user_name'] = ctx.session.userName
@@ -131,7 +131,7 @@ router.post('/api/addNote', async (ctx, next) => {
 	}
 })
 
-// 删除笔记
+// delete note
 router.post('/api/deleteNote', async (ctx, next	) => {
 	if ( ctx.session && ctx.session.isLogin && ctx.session.userName ) {
 		await Models.NoteList.remove({
@@ -154,7 +154,7 @@ router.post('/api/deleteNote', async (ctx, next	) => {
 	}
 })
 
-// 修改笔记
+// modify note
 router.post('/api/modify', async (ctx, next) => {
 	if ( ctx.session && ctx.session.isLogin && ctx.session.userName ) {
 		await new Promise((resolve, reject) => {
@@ -183,7 +183,7 @@ router.post('/api/modify', async (ctx, next) => {
 
 
 /**
- * 标签 C、R、U、D
+ * label C、R、U、D
  */
 
 router.post('/api/addTag', async (ctx, next) => {

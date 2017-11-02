@@ -1,32 +1,34 @@
 .icon{
   font-size: 20px;
+
 }
 .left-menu{
 
-  width: 70px;
+  width: 90px;
   height: 100vh;
   box-shadow: 0 1px 6px #ccc;
-  background-color: #F8EEE7;
+  background-color: #94618e;
   float: left;
   ul{
     li{
       text-align: center;
-      padding: 15px 0;
+      padding: 19px 0;
       cursor: pointer;
       font-size: 12px;
       a{
-        color: #94618e;
+        color: #F4DECB;
         &:hover{
-          color: #404040;
+          color: #49274A;
         }
       };
       .router-active{
-        color: #404040;
+        color: #49274A;
+        
       }
     }
     .personal-center{
 
-      width: 70px;
+      width: 90px;
       // position: absolute;
       bottom: 0;
       left: 0;
@@ -73,5 +75,5 @@
 .content-wrap{
   overflow: hidden;
   height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #F8EEE7;
 }

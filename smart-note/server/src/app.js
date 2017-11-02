@@ -39,5 +39,6 @@ app.use(bodyParser())
 app.use(router.routes())
 
 app.listen(config.port || 3001, ()=> {
-  console.log('Server is listening Port ' + config.port || 3001)
+  console.log('监听端口' + config.port || 3001)
+  console.log("环境变量是" + process.env.NODE_ENV);
 })

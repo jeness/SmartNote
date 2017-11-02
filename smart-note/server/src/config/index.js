@@ -1,6 +1,8 @@
-// in use
+const development_env = require('./development');
+const production_env = require('./production');
+
+//根据不同的NODE_ENV，输出不同的配置对象，默认输出development的配置对象
 module.exports = {
-    env: 'development', //environment
-    port: 3002,         //server port
-    mongodb_url: 'mongodb://localhost:27017/smartDev',    //database connection address
-  }
+    development: development_env,
+    production: production_env
+}[process.env.NODE_ENV || 'development']

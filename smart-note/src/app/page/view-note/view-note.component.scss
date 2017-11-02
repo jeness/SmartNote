@@ -1,31 +1,32 @@
-@import '../../../assets/ionicons.min.css'; /* 图标库 */
+@import '../../../assets/ionicons.min.css'; /* icons */
 .view-note-wrap{
   float: left;
   width: 70%;
   margin: 15px 25px 15px 65px;
   padding: 1rem;
   background-color: #fff;
-  box-shadow: 0 1px 6px #ccc;
+  box-shadow: 0 1px 6px #94618e;
   border-radius: 3px;
   .view-note-title{
     text-align: center;
     height: 35px;
-    font-size: 20px;
+    font-size: 25px;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #94618e;
   }
   .note-info{
-    border-bottom: 1px #ccc dashed;
+    border-bottom: 1px #94618e dashed;
     padding: 10px;
     display: flex;
     position: relative;
     .edit{
       height: 25px;
       line-height: 30px;
-      color: #999999;
+      color: #94618e;
       font-size: 16px;
       i{
         margin-right: 25px;
@@ -35,7 +36,7 @@
     .note-time{
       height: 25px;
       line-height: 30px;
-      color: #999999;
+      color: #94618e;
     }
     .note-tag{
       display: flex;
@@ -49,11 +50,11 @@
         text-align: center;
         height: 20px;
         line-height: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #94618e;
         border-radius: 4px;
         margin: 3px 3px;
         cursor: pointer;
-        color: #919191;
+        color: #94618e;
         padding: 0 5px;
       }
     }
@@ -67,7 +68,7 @@
       height: 25px;
       position: absolute;
       right: 0;
-      color: #3db8c1;
+      color: #94618e;
       cursor: pointer;
     }
   }
@@ -198,7 +199,7 @@
   }
 }
 
-// 目录
+// Index
 .catalog-wrap{
   overflow: hidden;
   overflow: auto;
@@ -206,29 +207,35 @@
   max-height: 100vh;
   // margin: 15px 15px 15px 0;
   // border-left: 1px solid #eee;
-  box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 1px 1px #94618e;
   background-color: #fff;
   h3{
+    color: #94618e;
     padding: 5px 20px 5px 20px;
+  }
+  h4{
+    color: #94618e;
+    padding: 5px 20px 15px 20px;
   }
   &::-webkit-scrollbar{
     width: 1px;
+    
   }
   ul{
     list-style-type: none;
     .active{
       padding: 5px 20px 5px 20px;
-      background-color: #f3f3f3;
-      border-left: 3px solid #3db8c1;
+      background-color: #f8eee7;
+      border-left: 3px solid #94618e;
       a{
-        color: #3db8c1;
+        color: #94618e;
       }
     }
     li{
       padding: 5px 20px 5px 20px;
       a{
        text-decoration: none;
-       color: #222222; 
+       color: #94618e; 
        cursor: pointer;
       }
     }
@@ -241,7 +248,7 @@
   }
 }
 
-// 删除提示
+// hint for delete
 .delect-wrap{
   position: fixed;
   top: 0;
@@ -262,14 +269,14 @@
       line-height: 42px;
       font-size: 36px;
       margin-bottom: 10px;
-      color: #ababab;
+      color: #94618e;
     }
     .text{
       text-align: center;
       margin: 0 40%;
       height: 50px;
       line-height: 50px;
-      border-bottom: 1px #d9d9d9 solid;
+      border-bottom: 1px #94618e solid;
     }
     .tip{
       height: 120px;
@@ -295,7 +302,7 @@
         outline: none;
       }
       .delete{
-        background-color: #3db8c1;
+        background-color: #94618e;
         color: #fff;
         border: none;
       }

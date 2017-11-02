@@ -31,7 +31,7 @@ export class FilterNoteContentPipe implements PipeTransform {
 export class ClassificationComponent implements OnInit, OnDestroy {
   tagListSub: Subscription;
   tagList = [];
-  content = '全部';
+  content = 'All';
   tabIsActive = true;
   allNoteSub: Subscription;
   allNote = [];
@@ -71,7 +71,7 @@ export class ClassificationComponent implements OnInit, OnDestroy {
   all() {
     this._activeFalse();
     this.tabIsActive = true;
-    this.content = '全部';
+    this.content = 'All';
     this.currentNoteList = this.allNote;
   }
 

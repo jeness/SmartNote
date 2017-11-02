@@ -23,7 +23,8 @@
 </div>
 
 <div class="catalog-wrap">
-  <h3>目录</h3>
+  <h3>Index of Notes:</h3>
+  <h4>Markdown Headings</h4>  
   <ul>
     <li *ngFor="let item of catalog" [className]="item.tagName" [class.active]="item.isActive">
       <a (click)="catalogNavigation(item)">{{item.text}}</a>
@@ -37,14 +38,14 @@
       <i class="ion-trash-a"></i>  
     </div>
     <div class="text">
-      删除笔记
+      Delete Note
     </div>
     <div class="tip">
-      确定删除<em>《{{noteInfo.title}}》</em>笔记吗？
+      Are you sure to delete note<em>《{{noteInfo.title}}》</em>？
     </div>
     <div class="btn">
-      <button class="cancel" (click)="cancel()">取消</button>
-      <button class="delete" (click)="confirmDelete()">删除</button>
+      <button class="cancel" (click)="cancel()">Cancel</button>
+      <button class="delete" (click)="confirmDelete()">Delete</button>
     </div>
   </div>
 </div>

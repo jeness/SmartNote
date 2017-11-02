@@ -83,7 +83,7 @@ export class AddLinkNoteComponent implements OnInit, OnDestroy {
   // Save
   save() {
      if (this.noteTitle === '' || this.noteContent === '' || this.labelList.length === 0) {
-      this.msg.info('Please complete note info！');
+      this.msg.info('Please complete note info!');
     } else {
       const sub = this.noteService._addNote({
         title: this.noteTitle,
@@ -93,7 +93,7 @@ export class AddLinkNoteComponent implements OnInit, OnDestroy {
         sourceLink: this.sourceLink
       }).subscribe((res) => {
         if (res['code'] === 200) {
-          this.msg.info('Successfully Saved！');
+          this.msg.info('Successfully Saved!');
           this.noteService._updateAllNote();
           localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
           this.router.navigate(['/viewNote']);

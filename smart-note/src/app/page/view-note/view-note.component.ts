@@ -49,8 +49,8 @@ export class ViewNoteComponent implements OnInit {
       }
     });
 
-    const contentDom = this.parseDom(this.noteInfo.content); // 把html字符串装换成DOM
-    // 提取笔记内容生成目录信息
+    const contentDom = this.parseDom(this.noteInfo.content); // convert html string to DOM
+    // extract note info to generate index info
     Array.prototype.slice.call(contentDom.querySelectorAll('h1,h2,h3,h4,h5,h6')).forEach((item, index) => {
       item.id = item.localName + '-' + index;
       let active;
@@ -102,7 +102,7 @@ export class ViewNoteComponent implements OnInit {
     this.noteService._deleteNote(id).subscribe((res) => {
       if (res['data'].ok === 1) {
         this.isShowDelect = false;
-        this.msgService.info('删除成功！');
+        this.msgService.info('Sucessfully Deleted!');
         this.noteService._updateAllNote();
         this.router.navigate(['/classification']);
       }

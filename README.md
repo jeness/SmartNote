@@ -29,18 +29,17 @@ SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Gr
 - Make sure that the /data/db directory has the right permissions by running
 
 ``sudo chown -R `id -un` /data/db``
-- Run the Mongo daemon, in one of your terminal windows run `mongod`. This should start the Mongo server.
-- Run the Mongo shell, with the Mongo daemon running in one terminal, type `mongo` in another terminal window. This will run the Mongo shell which is an application to access data in MongoDB.
-- To exit the Mongo shell run `quit()`
-- To stop the Mongo daemon hit `ctrl-c`
 
-2. Run `mongod` to start the service after installation.
+2. Run `mongod` in the terminal to start the the Mongo daemon, this step starts the Mongo serever.
 
 3. Before starting the application, you need to install some dependencies. Please reference the next section for details.
 Run `npm run start` to start the application. Navigate to `http://localhost:4300/`. The app will automatically reload if you change any of the source files.
 
 4. For Server part, go to folder server by `cd server/`.
 Run `npm install` and `npm run dev`.
+5. Exit mongo service:
+- To exit the Mongo shell run `quit()
+- to quit the Mongo daemon, hit `ctrl-c`.
 
 
 ## Dependencies

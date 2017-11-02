@@ -28,6 +28,9 @@
   }
 }
 
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:#94618e;
+}
 .add-note-toolbar{
   padding: 10px 0;
   border-bottom: 1px solid #ececec;

@@ -36,7 +36,7 @@ export class TagComponent implements OnInit , OnDestroy {
       this.tagService._addTag(value);
       this.tagName = '';
     } else {
-      this.msg.info('标签名字不能为空！');
+      this.msg.info('Tag cannot be empty!');
     }
   }
 

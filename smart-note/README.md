@@ -2,13 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
-## Development server
+## Development 
 
-Before run our application, you need to set up the json-server. 
+Before run our application, you need to install mongodb. 
 
-Run `npm run json-server` to start.
+Run `mongod` to start the service after installation.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` to start the application. Navigate to `http://localhost:4300/`. The app will automatically reload if you change any of the source files.
+
+For Server part, go to folder server by `cd server/`.
+Run `npm install` and `npm run dev`.
+
 
 ## Dependencies
 For markdown directives, you need to install some libraries.
@@ -17,6 +21,7 @@ Install SimpleDEM and Highlight for markdown note features.
 
 Run `npm install simplemde --save` and `npm install angular-highlightjs --save`.
 
+Run `npm install nodemon --save`
 
 ## Code scaffolding
 

@@ -50,10 +50,10 @@ import { TagService } from './services/tag/tag.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,  // http模块
-    FormsModule, // 表单模块
-    AppRoutingModule, // 路由配置模块
-    BrowserAnimationsModule, // 动画模块
+    HttpClientModule,  
+    FormsModule, 
+    AppRoutingModule, 
+    BrowserAnimationsModule, 
   ],
   providers: [
     {
@@ -66,7 +66,7 @@ import { TagService } from './services/tag/tag.service';
     NoteService,
     MsgService,
   ],
-  bootstrap: [AppComponent], // 根组件
+  bootstrap: [AppComponent], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

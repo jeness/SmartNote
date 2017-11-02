@@ -13,17 +13,17 @@ export class NoteService {
     this._updateAllNote();
   }
 
-  // 添加
+  // add
   _addNote(param: editNote) {
     return this.http.post('/api/addNote', param);
   }
 
-  // 修改
+  // modify
   _modifyNote(param: editNote) {
     return this.http.post('/api/modify', param);
   }
 
-  // 删除
+  // delete
   _deleteNote(id) {
     return this.http.post('/api/deleteNote', {id: id});
   }

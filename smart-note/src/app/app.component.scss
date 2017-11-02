@@ -6,7 +6,7 @@
   width: 70px;
   height: 100vh;
   box-shadow: 0 1px 6px #ccc;
-  background-color: #fff;
+  background-color: #F8EEE7;
   float: left;
   ul{
     li{
@@ -15,7 +15,7 @@
       cursor: pointer;
       font-size: 12px;
       a{
-        color: #919191;
+        color: #94618e;
         &:hover{
           color: #404040;
         }
@@ -54,7 +54,7 @@
         }
       }
       .logout{
-        text-align: left;
+        text-align: center;
         padding: 5px;
         font-size: 14px;
         color: #4a4a4a;

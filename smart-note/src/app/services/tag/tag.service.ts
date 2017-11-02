@@ -13,7 +13,7 @@ export class TagService {
     this._updateTagList();
   }
 
-  // 新增
+  // add
   _addTag(name: String) {
     this.http.post('/api/addTag', {
       name: name
@@ -23,7 +23,7 @@ export class TagService {
     });
   }
 
-  // 删除
+  // delte
   _deleteTag(id) {
     this.http.post('/api/deleteTag', {
       id: id
@@ -32,7 +32,7 @@ export class TagService {
       });
   }
 
-  // 获取整个列表
+  // getTagList
   _getTagList() {
     return this.http.get('/api/TagList');
   }

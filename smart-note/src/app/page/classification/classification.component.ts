@@ -19,7 +19,8 @@ export class ClassificationTabsContentHeightDirective {
 @Pipe({name: 'filterNoteContent'})
 export class FilterNoteContentPipe implements PipeTransform {
   transform(value: String): String {
-    return value.replace(/[^\u4e00-\u9fa5]/gi, '');
+    return value.replace(/[/d]/g, '');
+    
   }
 }
 

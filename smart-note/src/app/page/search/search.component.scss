@@ -1,18 +1,28 @@
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:#94618e;
+}
 .search-wrap{
   height: 100vh;
   padding: 1vh 8vh 30vh 8vh;
+  .note-name{
+   // border-bottom: 1px solid #94618e;
+    padding-bottom: 3vh;
+    font-size: 19px;
+    margin-top: 0.5rem;
+    color: #94618e;
+  };
   .input-wrap{
     height:52px;
     line-height:52px;
-    margin-top: 19vh;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid #ececec;
+    margin-top: 9vh;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #94618e;
     .search-input{
       border-bottom: 1px solid #ccc;
       background-color: transparent;
-      margin-bottom: 3vh;
+      margin-bottom: 1vh;
       border: none;
-      color: #ccc;
+      color: #94618e;
       height: 52px;
       width: 100%;
       overflow-x: scroll;
@@ -22,6 +32,7 @@
   }
 
   .tab-content{
+    margin-top: 1vh;
     transition: opacity 1s;
     display: flex;
     flex-wrap: wrap;
@@ -33,16 +44,16 @@
     }
     .note-item{
       width: 28%;
-      height: 180px;
+      height: 150px;
       background-color: #f7f7f7;
-      box-shadow: 0 1px 6px #ccc;
+      box-shadow: 0 1px 6px #94618e;
       border-radius: 3px;
       margin: 1% 1%;
       padding: 1%;
       text-align: center;
       .title{
         font-size: 16px;
-        color: #484848;
+        color: #49274a;
         cursor: pointer;
         height: 24px;
         max-height: 24px;
@@ -51,10 +62,10 @@
         text-overflow: ellipsis;
       }
       .date{
-        color: #aaa;
+        color: #94618e;
         font-size: 12px;
         padding: 10px 0;
-        border-bottom: 1px dashed #ddd;
+        border-bottom: 1px dashed #94618e;
       }
       .content{
         text-align: left;

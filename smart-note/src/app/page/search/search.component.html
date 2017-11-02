@@ -1,6 +1,9 @@
 <div class="search-wrap">
   <div class="input-wrap">
-    <input class="search-input" [(ngModel)]="searchName" placeholder="请输入笔记标题或标签关键字" autofocus="autofocus" (keydown.enter)="onEnter(searchName)"/>
+    <input class="search-input" [(ngModel)]="searchName" placeholder="Search: Input Title or Tag, press Enter to show all" autofocus="autofocus" (keydown.enter)="onEnter(searchName)"/>
+  </div>
+  <div class="note-name">
+    Notice：Click the Title region to show note details.
   </div>
   <div class="tab-content" classificationTabsContentHeight>
     <div class="note-item" *ngFor="let item of resultNoteList">

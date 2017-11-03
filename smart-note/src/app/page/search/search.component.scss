@@ -4,23 +4,16 @@
 .search-wrap{
   height: 100vh;
   padding: 1vh 8vh 30vh 8vh;
-  .note-name{
-   // border-bottom: 1px solid #94618e;
-    padding-bottom: 3vh;
-    font-size: 19px;
-    margin-top: 0.5rem;
-    color: #94618e;
-  };
   .input-wrap{
     height:52px;
     line-height:52px;
-    margin-top: 9vh;
-    padding-bottom: 1rem;
+    margin-top: 3vh;
+    padding-bottom: 1.2rem;
     border-bottom: 1px solid #94618e;
     .search-input{
       border-bottom: 1px solid #ccc;
       background-color: transparent;
-      margin-bottom: 1vh;
+      margin-bottom: 3vh;
       border: none;
       color: #94618e;
       height: 52px;
@@ -32,7 +25,6 @@
   }
 
   .tab-content{
-    margin-top: 1vh;
     transition: opacity 1s;
     display: flex;
     flex-wrap: wrap;

@@ -20,7 +20,7 @@ import { ClassificationComponent, ClassificationTabsContentHeightDirective, Filt
 import { ViewNoteComponent } from './page/view-note/view-note.component';
 import { EditNoteComponent } from './page/edit-note/edit-note.component';
 import { TagComponent } from './page/tag/tag.component';
-
+import {AboutComponent} from './about/about.component';
 // directive
 import { MarkdownEditorDirective } from './directives/markdown-editor/markdown-editor.directive';
 
@@ -43,6 +43,7 @@ import { TagService } from './services/tag/tag.service';
     DropdownComponent,
     ButtonComponent,
     TagComponent,
+    AboutComponent,
     ClassificationComponent,
     ViewNoteComponent,
     EditNoteComponent,

@@ -1,4 +1,9 @@
  @import '../../directives/markdown-editor/simplemde.min.scss'; 
+
+ ::-webkit-input-placeholder { /* WebKit browsers */
+  color:#94618e;
+}
+
 .add-note-wrap {
   margin: 15px 10%;
   padding: 1rem;
@@ -20,7 +25,7 @@
     height: 30px;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 25px;
     color:#94618e;
   }
 }
@@ -59,7 +64,7 @@
   .tag-item{
     height: 25px;
     line-height: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid #94618e;
     border-radius: 4px;
     margin: 3px 3px;
     display: flex;
@@ -72,12 +77,12 @@
     i{
       line-height: 25px;
       padding: 0 6px;
-      border-left: 1px solid #ccc;
+      border-left: 1px solid #94618e;
       font-size: 12px;
-      color: #ccc;
+      color: #94618e;
     };
     i:hover{
-      color: #808b96;
+      color: #94618e;
     }
     &:hover{
       box-shadow: 1px 1px 4px rgba(0,0,0,.2);

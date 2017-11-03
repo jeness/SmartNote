@@ -60,10 +60,10 @@ export class EditNoteComponent implements OnInit, OnDestroy {
     this.content = data;
   }
 
-  // 保存笔记
+  // save note
   save() {
     if (this.title === '' || this.content === '' || this.tagList.length === 0) {
-      this.msg.info('请输入完整的笔记信息！');
+      this.msg.info('Please complete note info!');
     } else {
       const sub = this.noteService._modifyNote({
         title: this.title,
@@ -74,7 +74,7 @@ export class EditNoteComponent implements OnInit, OnDestroy {
         _id: this.noteInfo._id
       }).subscribe((res) => {
         if (res['code'] === 200) {
-          this.msg.info('修改成功！');
+          this.msg.info('Successfully Modified!');
           this.noteService._updateAllNote();
           localStorage.setItem('noteItemInfo', JSON.stringify(res['data']));
           this.router.navigate(['/viewNote']);

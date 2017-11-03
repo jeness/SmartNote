@@ -1,4 +1,9 @@
 @import '../add-note/add-note.component.scss';
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:#94618e;
+}
+
 .add-link-note{
   height: 100vh;
   padding: 1vh 8vh 30vh 8vh;
@@ -28,9 +33,8 @@
   }
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */
-  color:#94618e;
-}
+
+
 .add-note-toolbar{
   padding: 10px 0;
   border-bottom: 1px solid #ececec;

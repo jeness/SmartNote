@@ -1,14 +1,12 @@
-.classification-wrap{
+ .classification-wrap{
   margin: 0 2rem;
   padding: 1rem;
-  .note-name{
-    //border-bottom: 1px solid #94618e;
-    padding-bottom: 3vh;
-    font-size: 25px;
-    margin-top: 2rem;
-    color: #94618e;
-  }
 
+  .note-name{
+     padding-bottom: 2px;
+     font-size: 25px;
+     color: #94618e;
+   };
   .tabs{
     max-width: 100%;
     overflow: auto;
@@ -37,7 +35,6 @@
   };
 
   .tab-content{
-    margin-top: 1rem;
     transition: opacity 1s;
     display: flex;
     flex-wrap: wrap;

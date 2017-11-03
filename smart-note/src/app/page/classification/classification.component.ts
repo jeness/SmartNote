@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class ClassificationTabsContentHeightDirective {
   constructor(el: ElementRef) {
     el.nativeElement.style.height = window.innerHeight - 80 + 'px';
-    el.nativeElement.style.maxHeight = window.innerHeight - 80 + 'px';
+    el.nativeElement.style.maxHeight = window.innerHeight - 100 + 'px';
     el.nativeElement.style.overflow = 'auto';
   }
 }

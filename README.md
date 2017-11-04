@@ -10,14 +10,17 @@ SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Gr
 
 
 ## Features
-- Accounts management: sign in, sign out.
+- Account management: sign in, sign out.
 - Basic notes: Create, Retrieve, Update, Delete
-- Todo: create a todo, complete a todo, delete a todo and view all todos.
-- Markdown notes: create a markdown note with its title, tag and content.
-- Search notes: search note by keyword or tag
-- Tag notes: create tags and classify notes by tag.
 - URL notes: generate note from URL automatically.
+- Markdown notes: create a markdown note with its title, tag and content.
 - Archive note: view all archived notes.
+- Classification: classify note by tags.
+- View note: preview url note and markdown note.
+- Edit note: modify markdown note.
+- Delete note.
+- Tag notes: create tags and classify notes by tag.
+- Search notes: search note by keyword or tag.
 
 
 ## Development 
@@ -75,7 +78,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Screenshots
 
 ### Login
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/login%20in.png)
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/login%20in.png)
 
 ### Todo
 ![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/todo.png)

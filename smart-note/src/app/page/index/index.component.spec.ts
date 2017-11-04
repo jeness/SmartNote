@@ -19,7 +19,7 @@ describe('IndexComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('index page should be created', () => {
     expect(component).toBeTruthy();
   });
 });

@@ -10,26 +10,39 @@ SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Gr
 
 
 ## Features
-- Accounts management: sign in, sign out.
+- Account management: sign in, sign out.
 - Basic notes: Create, Retrieve, Update, Delete
-- Todo: create a todo, complete a todo, delete a todo and view all todos.
-- Markdown notes: create a markdown note with its title, tag and content.
-- Search notes: search note by keyword or tag
-- Tag notes: create tags and classify notes by tag.
 - URL notes: generate note from URL automatically.
+- Markdown notes: create a markdown note with its title, tag and content.
 - Archive note: view all archived notes.
+- Classification: classify note by tags.
+- View note: preview url note and markdown note.
+- Edit note: modify markdown note.
+- Delete note.
+- Tag notes: create tags and classify notes by tag.
+- Search notes: search note by keyword or tag.
 
 
 ## Development 
 
-Before run our application, you need to install mongodb. 
+1. Before run our application, you need to install mongodb.
+- Open the Terminal app and type `brew update`.
+- After updating Homebrew `brew install mongodb`
+- After downloading Mongo, create the “db” directory. This is where the Mongo data files will live. You can create the directory in the default location by running `mkdir -p /data/db`
+- Make sure that the /data/db directory has the right permissions by running
 
-Run `mongod` to start the service after installation.
+``sudo chown -R `id -un` /data/db``
 
+2. Run `mongod` in the terminal to start the the Mongo daemon, this step starts the Mongo serever.
+
+3. Before starting the application, you need to install some dependencies. Please reference the next section for details.
 Run `npm run start` to start the application. Navigate to `http://localhost:4300/`. The app will automatically reload if you change any of the source files.
 
-For Server part, go to folder server by `cd server/`.
+4. For Server part, go to folder server by `cd server/`.
 Run `npm install` and `npm run dev`.
+5. Exit mongo service:
+- To exit the Mongo shell run `quit()
+- to quit the Mongo daemon, hit `ctrl-c`.
 
 
 ## Dependencies
@@ -37,9 +50,9 @@ For markdown directives, you need to install some libraries.
 
 Install SimpleDEM and Highlight for markdown note features.
 
-Run `npm install simplemde --save` and `npm install angular-highlightjs --save`.
+1. navigate to app root directory(./smart-note), run `npm install simplemde --save` and `npm install angular-highlightjs --save` to install dependencies for markdown functionality.
 
-Run `npm install nodemon --save`
+2. navigate to ./server, run `npm install nodemon --save`
 
 ## Code scaffolding
 
@@ -65,17 +78,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Screenshots
 
 ### Login
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/login%20in.png)
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/1_login.png)
 
-### Todo
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/todo.png)
-
-### Markdown Note
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/markdown%20note.png)
-
-### Tag
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/tag.png)
 
 ### About
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/about.png)
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/3_about.png)
 

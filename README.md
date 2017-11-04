@@ -78,17 +78,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Screenshots
 
 ### Login
-![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/login%20in.png)
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/1_login.png)
 
-### Todo
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/todo.png)
-
-### Markdown Note
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/markdown%20note.png)
-
-### Tag
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/tag.png)
 
 ### About
-![](https://github.com/Shanfang/SmartNote/blob/master/screenshots/about.png)
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/3_about.png)
 

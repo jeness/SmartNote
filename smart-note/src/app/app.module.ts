@@ -2,6 +2,7 @@ import { GlobalResponseInterceptor } from './interceptor/global-response-interce
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
@@ -51,10 +52,11 @@ import { TagService } from './services/tag/tag.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,  
-    FormsModule, 
-    AppRoutingModule, 
-    BrowserAnimationsModule, 
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
   ],
   providers: [
     {

@@ -41,7 +41,7 @@ Run `npm run start` to start the application. Navigate to `http://localhost:4300
 4. For Server part, go to folder server by `cd server/`.
 Run `npm install` and `npm run dev`.
 5. Exit mongo service:
-- To exit the Mongo shell run `quit()
+- To exit the Mongo shell run `quit()`
 - to quit the Mongo daemon, hit `ctrl-c`.
 
 

@@ -9,4 +9,18 @@ export class Login {
   getTitle() {
     return browser.getTitle();
   }
+
+  // get username
+  getUsername() {
+    return element(by.id("username"))
+  }
+  // get password
+  getPassword() {
+    return element(by.id("password"))
+  }
+
+  // submit username and password
+  login() {
+    return element(by.id("login"));
+  }
 }

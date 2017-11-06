@@ -4,9 +4,9 @@
     SmartNote
   </div>
   <div class="login-panel">
-    <input type="text" class="login-name" placeholder="username" [(ngModel)]="name">
-    <input type="password" class="login-pwd" placeholder="password" (keydown.enter)="login()" [(ngModel)]="pwd">
-    <button type="submit" class="login-submit" (click)="login()">Login</button>
+    <input type="text" class="login-name" placeholder="username" [(ngModel)]="name" id="username">
+    <input type="password" class="login-pwd" placeholder="password" (keydown.enter)="login()" [(ngModel)]="pwd" id="password">
+    <button type="submit" class="login-submit" (click)="login()" id="login">Login</button>
     <div class="case-number">Account: software Password: cen5035</div>
   </div>
 </div>

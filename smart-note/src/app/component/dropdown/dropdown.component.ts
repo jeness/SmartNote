@@ -1,14 +1,10 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
   animations: [
-    BrowserAnimationsModule,
-    NoopAnimationsModule,
     trigger('dropdownMenuState', [
       state('inactive', style({
         height: '0'

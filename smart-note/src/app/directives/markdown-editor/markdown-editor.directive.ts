@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input, Output, EventEmitter } from '@angular/core';
-import SimpleMDE from 'simplemde';
+import * as SimpleMDE from 'simplemde';
 import marked from 'marked';
 import highlight from 'highlight.js';
 

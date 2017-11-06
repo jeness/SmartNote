@@ -5,10 +5,21 @@ export class Tags {
     return browser.get('/tag');
   }
 
-  // get the welcome msg
-  getParagraphText() {
-    return element(by.css('h1')).getText();
+  // get the app title
+  getTitle() {
+    return browser.getTitle();
   }
+
+  // get the newly inserted tag
+  getNewTag() {
+    return element(by.id("newTag"));
+  }
+
+  // get all the tags
+  getAllTags() {
+    return element.all(by.id('tags')).all(by.css('div'));
+  }
+
 
 //   // get the list of tags
 //   getAllTags() {  

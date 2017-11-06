@@ -3,7 +3,7 @@ import { browser } from 'protractor';
 
 // sleep for demonstration 
 function sleep() {
-    browser.driver.sleep(1500); 
+    browser.driver.sleep(2000); 
   }
   
 describe('About page', () => {
@@ -13,29 +13,23 @@ describe('About page', () => {
     page = new About();
   });
 
-
-  // display welcome msg
-  it('should display welcome message', () => {
+  // display app title
+  it('should get the title', () => {
     page.navigateTo();
-    expect(page.getWelcome()).toEqual('Welcome to SmartNote');
+    sleep();    
+    expect(page.getTitle()).toEqual('SmartNote');
   });
 
-  // display app name
-  it('should display App name', () => {
-    page.navigateTo();
-    expect(page.getAppName()).toEqual('SmartNote app');
-  });
+//   // display app info msg
+//   it('should display a list of tags', () => {
+//     page.navigateTo();
+//     expect(page.getAppInfo()).toEqual('SmartNote is a notes application based on Angualr 4, MongoDB and Node.js.');
+//   });
 
-  // display app info msg
-  it('should display a list of tags', () => {
-    page.navigateTo();
-    expect(page.getAppInfo()).toEqual('SmartNote is a notes app based on Angualr 4 and Node.js. developed by Group Augo');
-  });
-
-  // display app details
-  it('should display a list of tags', () => {
-    page.navigateTo();
-    expect(page.getAppDetails()).toEqual('Organize your life with SmartNote application for keeping track of notes, tasks, and to-do lists.');
-  });
+//   // display app details
+//   it('should display a list of tags', () => {
+//     page.navigateTo();
+//     expect(page.getAppDetails()).toEqual('Organize your life with SmartNote application for keeping track of notes, tasks, and to-do lists.');
+//   });
 
 });

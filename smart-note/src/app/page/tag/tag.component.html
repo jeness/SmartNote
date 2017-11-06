@@ -1,10 +1,10 @@
 <div class="tag">
   <div class="input-wrap">
-    <input class="search-input" [(ngModel)]="tagName" placeholder="Please input Tag and press Enter" autofocus="autofocus" (keydown.enter)="addTag(tagName)"/>
+    <input class="search-input" id="newTag" [(ngModel)]="tagName" placeholder="Please input Tag and press Enter" autofocus="autofocus" (keydown.enter)="addTag(tagName)"/>
   </div>
   <div class="tag-list-wrap">
-    <div class="tag-item" *ngFor="let item of tagList; let i=index">
-      <div>{{item.name}}</div>
+    <div class="tag-item" *ngFor="let item of tagList; let i=index" id= "tags">
+      <div class="tag-list">{{item.name}}</div>
       <i class="ion-close-round" (click)="delectTagItem(item._id)"></i>
     </div>
   </div>

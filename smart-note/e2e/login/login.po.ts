@@ -5,4 +5,8 @@ export class Login {
     return browser.get('/login');
   }
 
+  // get the app title
+  getTitle() {
+    return browser.getTitle();
+  }
 }

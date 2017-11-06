@@ -1,24 +1,24 @@
-import { Addnote } from './addnote.po';
+import { Archive } from './archive.po';
 import { browser } from 'protractor';
 
 // sleep for demonstration 
 function sleep() {
     browser.driver.sleep(2000); 
-  }
+}
 
-describe('Addnote page', () => {
-  let page: Addnote;
+describe('Archive Page', () => {
+  let page: Archive;
 
   beforeEach(() => {
-    page = new Addnote();
+    page = new Archive();
   });
+
   // display app title
   it('should get the title', () => {
     page.navigateTo();
-    sleep();    
+    sleep();
     expect(page.getTitle()).toEqual('SmartNote');
   });
-// //   // to do some clean up
-// //   // use afterEach(()=> {});
+
 
 });

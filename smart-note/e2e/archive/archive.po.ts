@@ -1,12 +1,13 @@
 import { browser, by, element } from 'protractor';
 
-export class Addnote {
+export class Archive {
   navigateTo() {
-    return browser.get('/addNote');
+    return browser.get('/archive');
   }
 
   // get the app title
   getTitle() {
     return browser.getTitle();
   }
+
 }

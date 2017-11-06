@@ -1,24 +1,25 @@
-import { Addnote } from './addnote.po';
+import { URLNotes } from './url-note.po';
 import { browser } from 'protractor';
 
 // sleep for demonstration 
 function sleep() {
     browser.driver.sleep(2000); 
-  }
+}
 
-describe('Addnote page', () => {
-  let page: Addnote;
+describe('Tag Page', () => {
+  let page: URLNotes;
 
   beforeEach(() => {
-    page = new Addnote();
+    page = new URLNotes();
   });
+
   // display app title
   it('should get the title', () => {
     page.navigateTo();
-    sleep();    
+    sleep();
     expect(page.getTitle()).toEqual('SmartNote');
   });
-// //   // to do some clean up
-// //   // use afterEach(()=> {});
+
+
 
 });

@@ -4,14 +4,16 @@ export class About {
   navigateTo() {
     return browser.get('/about');
   }
-  // get the app name
-  getWelcome() {
-    return element(by.css('h1')).getText();
+  
+  // get the app title
+  getTitle() {
+    return browser.getTitle();
   }
 
   // get the app name
   getAppName() {
-    return element(by.css('.header h1')).getText();
+    //return element(by.css('.header h1')).getText();
+    return element(by.id('app-name')).getText();
   }
   
   // get info

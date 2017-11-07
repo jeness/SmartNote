@@ -10,21 +10,17 @@ export class Login {
     return browser.getTitle();
   }
 
-  // get username
   getUsername() {
     return element(by.id("username"))
   }
-  // get password
   getPassword() {
     return element(by.id("password"))
   }
 
-  // submit username and password
   getLoginButton() {
     return element(by.id("login"));
   }
 
-  // get error message
   getError() {
     return element(by.model('loginError'));
   }

@@ -3,7 +3,7 @@ import { by, browser, protractor } from 'protractor';
 
 // sleep for demonstration 
 function sleep() {
-    browser.driver.sleep(2000); 
+    browser.driver.sleep(3000); 
   }
   
 var selectDropdownbyNum = function ( element, optionNum ) {
@@ -28,17 +28,28 @@ describe('Addnote page', () => {
     expect(page.getTitle()).toEqual('SmartNote');
   });
 
+  it('should not save incomplete note', ()=> {
+    let saveButton = page.getSaveButton();
+    saveButton.click();      
+    browser.driver.sleep(2000); 
+    let notePage = browser.getCurrentUrl();
+    expect(browser.getCurrentUrl()).toEqual(notePage);
+  });
+
   it('should create a new note', ()=>{
     let noteTitle = page.getNoteTitle();
     //let tag = page.getTag();
     //let tagList = page.getTagList();
     
-    noteTitle.sendKeys('note1');
+    noteTitle.sendKeys('This is a note for demo3');
     //tag.click();
 
-    expect(noteTitle.getAttribute('value')).toEqual('note1');     
+    expect(noteTitle.getAttribute('value')).toEqual('This is a note for demo3');     
     noteTitle.sendKeys(protractor.Key.ENTER);    
-    sleep();    
+    sleep(); 
+    noteTitle.clear();
+    noteTitle.sendKeys('This is another note for demo3');
+    sleep();     
   });
 
 });

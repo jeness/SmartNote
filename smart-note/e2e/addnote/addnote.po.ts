@@ -13,6 +13,10 @@ export class Addnote {
     return element(by.id('note-title'));
   }
 
+  getSaveButton() {
+    return element(by.id('save-button'));
+  }
+
   getTag() {
     //return element(by.id('tag-dropdown'));
     return element(by.cssContainingText('li', 'DemoTag'));

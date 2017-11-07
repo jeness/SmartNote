@@ -20,6 +20,13 @@ describe('URL note Page', () => {
     expect(page.getTitle()).toEqual('SmartNote');
   });
 
+  it('should not enter an empty URL', ()=> {
+    let noteTitle = page.getNoteTitle();
+    noteTitle.sendKeys('');
+    noteTitle.sendKeys(protractor.Key.ENTER);        
+    expect(noteTitle.getAttribute('value')).not.toEqual('some url');  
+  });
+  
   it('should create a URL note', ()=>{
     let noteTitle = page.getNoteTitle();
     noteTitle.sendKeys('https://www.cise.ufl.edu/~adobra/cen5035');

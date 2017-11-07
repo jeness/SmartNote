@@ -1,5 +1,5 @@
 import { Tags } from './tags.po';
-import { browser } from 'protractor';
+import { browser, protractor } from 'protractor';
 
 // sleep for demonstration 
 function sleep() {
@@ -20,6 +20,23 @@ describe('Tag Page', () => {
     expect(page.getTitle()).toEqual('SmartNote');
   });
 
+  it('should not add an empty tag', ()=> {
+    var newTag = page.getNewTag()
+    newTag.sendKeys('');
+    newTag.sendKeys(protractor.Key.ENTER);        
+    expect(newTag.getAttribute('value')).not.toEqual('DemoTag');  
+    browser.driver.sleep(3000); 
+  });
+  
+  it('should be able to add the new tag to the tag list', () => {
+    var newTag = page.getNewTag()
+    newTag.sendKeys('DemoTag');
+    expect(newTag.getAttribute('value')).toEqual('DemoTag'); 
+    sleep();        
+    newTag.sendKeys(protractor.Key.ENTER);    
+  });
+
+
   // // get the first tag from the tag list
   // it('should get the first tag from the tag list', () => {
   //   //page.navigateTo();
@@ -38,19 +55,10 @@ describe('Tag Page', () => {
   //   expect(newTag).toBeTruthy();
   // });
 
-  it('should be able to add the new tag to the tag list', () => {
-    var newTag = page.getNewTag().sendKeys('DemoTag');
-    var newTagSubmit = page.addNewTag();
-    sleep();    
-    expect(newTagSubmit).toBeTruthy();    
-  });
+
 
   // it('should show a list of tags when first load the app', () => {
   //   expect(page.getAllTags().count()).toEqual(3);
   // });
-  it('should not add an empty tag', ()=> {
-    var newTag = page.getNewTag().sendKeys('');
-    var newTagSubmit = page.addNewTag();
-    expect(newTagSubmit).toBeTruthy(); 
-  });
+
 });

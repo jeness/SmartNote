@@ -15,7 +15,7 @@
       </ul>
     </div>
     <div class="add-note-toolbar-btn">
-      <app-button [Icon]="'ion-checkmark-circled'" (click)="save()">Save</app-button>
+      <app-button [Icon]="'ion-checkmark-circled'" (click)="save()" id="save-button">Save</app-button>
     </div>
   </div>
   <div myMarkdownEditor (MarkdownEditorValue)="markdownValueChange($event)">

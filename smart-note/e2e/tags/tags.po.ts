@@ -12,13 +12,8 @@ export class Tags {
 
   // add a new tag
   getNewTag() {
-    return element(by.id("newTag"));
+    return element(by.id("new-tag"));
     //return element(by.css(".tag input[type=text]"));
-  }
-
-  // add the new tag to tag list
-  addNewTag() {
-    return element(by.css('.tag input[type=keydown.enter]'));
   }
 
   // get all the tags

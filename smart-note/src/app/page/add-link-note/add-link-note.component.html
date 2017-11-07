@@ -1,6 +1,6 @@
 <div class="add-link-note" *ngIf="!isShowMarkdownEditor" >
   <div class="input-wrap">
-    <input class="search-input" #myInput placeholder="Please input URL and Press Enter to generate note" autofocus="autofocus" (keydown.enter)="onEnter(myInput.value)"/>
+    <input id="urlnote-title" class="search-input" #myInput placeholder="Please input URL and Press Enter to generate note" autofocus="autofocus" (keydown.enter)="onEnter(myInput.value)"/>
   </div>
   <div class="note-name">
     Notice：Generate URL note automatically would cost some time, please be patient！

@@ -20,11 +20,11 @@ describe('Tag Page', () => {
     expect(page.getTitle()).toEqual('SmartNote');
   });
 
-  // get the first tag from the tag list
-  it('should get the first tag from the tag list', () => {
-    //page.navigateTo();
-    expect(page.getAllTags().get(0).getText()).toEqual('Hi');
-  });
+  // // get the first tag from the tag list
+  // it('should get the first tag from the tag list', () => {
+  //   //page.navigateTo();
+  //   expect(page.getAllTags().get(0).getText()).toEqual('Hi');
+  // });
 
   // // delete the first tag
   // it('should delete the first tag from the tag list', () => {
@@ -39,8 +39,9 @@ describe('Tag Page', () => {
   // });
 
   it('should be able to add the new tag to the tag list', () => {
-    var newTag = page.getNewTag().sendKeys('Go gators!');
+    var newTag = page.getNewTag().sendKeys('DemoTag');
     var newTagSubmit = page.addNewTag();
+    sleep();    
     expect(newTagSubmit).toBeTruthy();    
   });
 

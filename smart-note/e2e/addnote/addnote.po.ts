@@ -9,4 +9,15 @@ export class Addnote {
   getTitle() {
     return browser.getTitle();
   }
+  getNoteTitle() {
+    return element(by.id('note-title'));
+  }
+
+  getTag() {
+    //return element(by.id('tag-dropdown'));
+    return element(by.cssContainingText('li', 'DemoTag'));
+  }
+  getTagList() {
+    return element(by.css('my-dropdown-menu'));
+  }
 }

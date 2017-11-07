@@ -9,5 +9,8 @@ export class URLNotes {
   getTitle() {
     return browser.getTitle();
   }
-
+  
+  getNoteTitle() {
+    return element(by.id('urlnote-title'));
+  }
 }

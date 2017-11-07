@@ -2,7 +2,7 @@ import { browser, by, element } from 'protractor';
 
 export class Login {
   navigateTo() {
-    return browser.get('/login');
+    return browser.get('/index');
   }
 
   // get the app title
@@ -20,7 +20,12 @@ export class Login {
   }
 
   // submit username and password
-  login() {
+  getLoginButton() {
     return element(by.id("login"));
+  }
+
+  // get error message
+  getError() {
+    return element(by.model('loginError'));
   }
 }

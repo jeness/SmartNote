@@ -32,17 +32,24 @@ describe('Tag Page', () => {
   //   // delete
   // });
 
-  // display the newly entered tag
-  it('should be able to create new tag', () => {
-    //page.navigateTo();
+  // it('should be able to create new tag', () => {
+  //   var newTag = page.getNewTag().sendKeys('Go gators!');
+  //   sleep();    
+  //   expect(newTag).toBeTruthy();
+  // });
+
+  it('should be able to add the new tag to the tag list', () => {
     var newTag = page.getNewTag().sendKeys('Go gators!');
-    sleep();    
-    expect(newTag).toBeTruthy();
+    var newTagSubmit = page.addNewTag();
+    expect(newTagSubmit).toBeTruthy();    
   });
 
-  // display a list of tags
-  it('should display a list of tags', () => {
-    //page.navigateTo();
-    expect(page.getAllTags().count()).toBe(4);
+  // it('should show a list of tags when first load the app', () => {
+  //   expect(page.getAllTags().count()).toEqual(3);
+  // });
+  it('should not add an empty tag', ()=> {
+    var newTag = page.getNewTag().sendKeys('');
+    var newTagSubmit = page.addNewTag();
+    expect(newTagSubmit).toBeTruthy(); 
   });
 });

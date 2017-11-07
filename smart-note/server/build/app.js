@@ -22,7 +22,7 @@ app.use(staticCache({
 }));
 
 var cookie = {
-  maxAge: 5 * 60 * 1000, // cookie workable time
+  maxAge: 30 * 60 * 1000, // cookie workable time
   expires: '', // cookie expires time
   path: '', // cookie path
   domain: '', // cookie domain

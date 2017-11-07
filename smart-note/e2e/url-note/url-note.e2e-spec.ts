@@ -6,7 +6,7 @@ function sleep() {
     browser.driver.sleep(2000); 
 }
 
-describe('Tag Page', () => {
+describe('URL note Page', () => {
   let page: URLNotes;
 
   beforeEach(() => {
@@ -20,6 +20,9 @@ describe('Tag Page', () => {
     expect(page.getTitle()).toEqual('SmartNote');
   });
 
+  it('should create a URL note', ()=>{
+    
+  });
 
 
 });

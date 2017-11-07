@@ -18,12 +18,12 @@ export class About {
   
   // get info
   getAppInfo() {
-    return element(by.css('.about.profile-card.header > h2')).getText();
+    return element(by.id('app-info')).getText();
   }
  
-  getAppDetails() {
-    return element(by.css('.profile-card.profile-bio > p')).getText();
-  }
+  // getAppDetails() {
+  //   return element(by.css('.profile-card.profile-bio > p')).getText();
+  // }
   // getAppDetails() {
   //   return element(by.css('.profile-bio p')).getText();
   // }

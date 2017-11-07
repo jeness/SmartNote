@@ -10,14 +10,21 @@ export class Tags {
     return browser.getTitle();
   }
 
-  // get the newly inserted tag
+  // add a new tag
   getNewTag() {
     return element(by.id("newTag"));
+    //return element(by.css(".tag input[type=text]"));
+  }
+
+  // add the new tag to tag list
+  addNewTag() {
+    return element(by.css('.tag input[type=keydown.enter]'));
   }
 
   // get all the tags
   getAllTags() {
-    return element.all(by.id('tags')).all(by.css('div'));
+    // return element.all(by.id('tags')).all(by.css('div'));
+    return element.all(by.css(".tag .tag-list-wrap .tag-item"));
   }
 
 

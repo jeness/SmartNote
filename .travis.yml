@@ -14,7 +14,7 @@ script:
   sh build.sh
 
 serives:
-  mongod
+  mongodb
 
 
 notifications:

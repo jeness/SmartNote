@@ -8,7 +8,7 @@ import { TagService } from './../../services/tag/tag.service';
 import { LoadingBarService } from './../../services/loading-bar/loading-bar.service';
 import { Component, OnInit, ViewEncapsulation, Directive, ElementRef, OnDestroy } from '@angular/core';
 import 'rxjs/add/operator/map';
-import marked from 'marked';
+import * as marked from 'marked';
 import highlight from 'highlight.js';
 import { DomSanitizer } from '@angular/platform-browser';
 

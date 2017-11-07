@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { MsgService } from './../../services/msg/msg.service';
 import { NoteService } from './../../services/note/note.service';
 import { Component, OnInit, ViewEncapsulation, ElementRef, Input } from '@angular/core';
-import marked from 'marked';
+import * as marked from 'marked';
 import highlight from 'highlight.js';
 
 @Component({

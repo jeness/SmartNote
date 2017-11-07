@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { AddLinkNoteComponent } from './add-link-note.component';
 
@@ -8,7 +9,8 @@ describe('AddLinkNoteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddLinkNoteComponent ]
+      declarations: [ AddLinkNoteComponent ],
+      imports: [FormsModule],
     })
     .compileComponents();
   }));

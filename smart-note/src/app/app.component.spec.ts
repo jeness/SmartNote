@@ -2,7 +2,6 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
-// import { by, browser, element } from 'protractor';
 import {RouterLinkStubDirective} from './../../testing/router-stubs';
 import { By } from '@angular/platform-browser';
 

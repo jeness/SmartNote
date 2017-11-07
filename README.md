@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 [![Build Status](https://travis-ci.org/CindyHXH/SmartNote.svg?branch=master)](https://travis-ci.org/CindyHXH/SmartNote)
+=======
+[![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
+
+>>>>>>> 01d11845413ab8c2c97299110d37070677297de0
 # SmartNote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
@@ -43,7 +48,7 @@ Run `npm run start` to start the application. Navigate to `http://localhost:4300
 Run `npm install` and `npm run dev`.
 
 5. Exit mongo service:
-- To exit the Mongo shell run `quit()
+- To exit the Mongo shell run `quit()`
 - to quit the Mongo daemon, hit `ctrl-c`.
 
 6. Backend Testing:

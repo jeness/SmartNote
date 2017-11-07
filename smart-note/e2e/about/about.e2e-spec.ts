@@ -20,10 +20,6 @@ describe('About page', () => {
     expect(page.getTitle()).toEqual('SmartNote');
   });
 
-//   // display app details
-//   it('should display a list of tags', () => {
-//     page.navigateTo();
-//     expect(page.getAppDetails()).toEqual('Organize your life with SmartNote application for keeping track of notes, tasks, and to-do lists.');
-//   });
+
 
 });

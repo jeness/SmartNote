@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-[![Build Status](https://travis-ci.org/CindyHXH/SmartNote.svg?branch=master)](https://travis-ci.org/CindyHXH/SmartNote)
-=======
+
 [![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
 
->>>>>>> 01d11845413ab8c2c97299110d37070677297de0
 # SmartNote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.

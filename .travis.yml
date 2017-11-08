@@ -9,10 +9,11 @@ branches:
 
 before_script:
 
-install: travis_wait mvn install
 
 script:
   sh build.sh
+  sleep 15
+  sh buildclient.sh
 
 serives:
   mongodb

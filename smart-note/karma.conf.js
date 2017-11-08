@@ -28,6 +28,11 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
-  });
-};
+    customLaunchers: {
+      // tell TravisCI to use chromium when testing
+      Chrome_travis_ci: {
+         base: 'Chrome',
+         flags: ['--no-sandbox']
+      }
+   },
+})};

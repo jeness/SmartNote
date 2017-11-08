@@ -15,7 +15,10 @@ sudo chown -R `id -un` /data/db
 
 cd server
 npm install
-mongod & npm run dev
+
+cd ..
+npm run test
+#mongod & npm run dev
 
 #cd ..
 

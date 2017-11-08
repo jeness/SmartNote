@@ -6,18 +6,16 @@ os: osx
 branches:
   only:
     - master
+before_install:
+ - export CHROME_BIN=chromium-browser
 
+services:
+  mongodb
 before_script:
 
 
 script:
   sh build.sh
-  sleep 15
-  sh buildclient.sh
-
-serives:
-  mongodb
-
 
 notifications:
   email:

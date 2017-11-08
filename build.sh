@@ -15,5 +15,9 @@ npm install
 npm run dev
 
 cd ..
+npm run test
+#mongod & npm run dev
 
-npm run start &
+#cd ..
+
+#npm run start &

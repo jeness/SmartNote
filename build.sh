@@ -17,6 +17,6 @@ cd server
 npm install
 mongod & npm run dev
 
-cd ..
+#cd ..
 
-npm run start &
+#npm run start &

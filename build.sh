@@ -10,7 +10,7 @@ npm install supertest --save-dev
 
 brew update
 brew install mongodb
-mkdir -p /data/db
+sudo mkdir -p /data/db
 sudo chown -R `id -un` /data/db
 
 mongod &

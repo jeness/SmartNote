@@ -13,8 +13,6 @@ brew install mongodb
 mkdir -p /data/db
 chown -R `id -un` /data/db
 
-mongod &
-
 cd server
 npm install
-npm run dev
+mongod & npm run dev

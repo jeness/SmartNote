@@ -7,15 +7,12 @@ npm install -g mocha
 npm install chai
 npm install supertest --save-dev
 
-
-brew update
-brew install mongodb
-sudo mkdir -p /data/db
-sudo chown -R `id -un` /data/db
+mkdir -p /data/db
+chown -R `id -un` /data/db
 
 cd server
 npm install
-mongod & npm run dev
+npm run dev
 
 cd ..
 

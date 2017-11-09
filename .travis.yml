@@ -13,10 +13,10 @@ services:
   mongodb
 
 before_script:
+- cd smart-note 
 - npm install -g @angular/cli
 - npm install -g karma
 - npm install
-- cd smart-note 
 - ng build
 
 script:

@@ -9,6 +9,8 @@ import {inject, TestBed, async, fakeAsync, tick} from '@angular/core/testing';
 import {BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, ResponseOptions} from '@angular/http';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 import {HttpHandler, HttpParams} from '@angular/common/http';
+import 'rxjs/add/operator/toPromise';
+
 const note_one = {
   "title": "SmartNote is cool",
   "date": "2017-08-29 22:53:30",

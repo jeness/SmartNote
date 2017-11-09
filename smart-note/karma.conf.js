@@ -28,7 +28,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    // browsers: ['Chrome_travis_ci'],
     customLaunchers: {
       // tell TravisCI to use chromium when testing
       Chrome_travis_ci: {

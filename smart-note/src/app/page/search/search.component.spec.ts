@@ -22,7 +22,6 @@ const note_two = {
 };
 
 @Injectable()
-// class HeroService {
   class SearchComponent {
   constructor(private http: Http) {}
 
@@ -54,13 +53,13 @@ describe('SearchComponent', () => {
     this.testData = require('./mock-searchdata.json');
   });
 
-  it('getNroes() should query current service url', () => {
+  it('getNotes() should query current service url', () => {
     this.SearchComponent.getNotes();
     expect(this.lastConnection).toBeDefined('no http service connection at all?');
     expect(this.lastConnection.request.url).toMatch(/api\/notes/, 'url invalid');
   });
 
-  it('getNoes() should return some notes', fakeAsync(() => {
+  it('getNotes() should return some notes', fakeAsync(() => {
        let result: any;
        this.SearchComponent.getNotes().then((notes: any) => result = notes);
        this.lastConnection.mockRespond(new Response(new ResponseOptions({

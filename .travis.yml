@@ -28,5 +28,11 @@
 language: node_js
 node_js:
   - "8.5"
-env: NODE_ENV=test
+# # env: NODE_ENV=TEST
+# script: make test
+
+env:
+  - NODE_ENV=production
+  - NODE_ENV=staging
+
 services: mongodb

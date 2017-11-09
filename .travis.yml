@@ -14,6 +14,7 @@ services:
 
 before_script:
 - cd smart-note 
+- npm cache clean --force
 - npm install -g @angular/cli
 - npm install -g karma
 - npm install

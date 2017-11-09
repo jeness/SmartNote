@@ -10,6 +10,9 @@
 // import {MockBackend, MockConnection} from '@angular/http/testing';
 // import {HttpHandler, HttpParams} from '@angular/common/http';
 
+// import 'rxjs/add/operator/toPromise';
+
+
 // const note_one = {
 //   "title": "SmartNote is cool",
 //   "date": "2017-08-29 22:53:30",
@@ -22,7 +25,9 @@
 // };
 
 // @Injectable()
+
 // // class HeroService {
+
 //   class SearchComponent {
 //   constructor(private http: Http) {}
 
@@ -54,13 +59,18 @@
 //     this.testData = require('./mock-searchdata.json');
 //   });
 
+
 //   it('getNroes() should query current service url', () => {
+
 //     this.SearchComponent.getNotes();
 //     expect(this.lastConnection).toBeDefined('no http service connection at all?');
 //     expect(this.lastConnection.request.url).toMatch(/api\/notes/, 'url invalid');
 //   });
 
+
 //   it('getNoes() should return some notes', fakeAsync(() => {
+
+
 //        let result: any;
 //        this.SearchComponent.getNotes().then((notes: any) => result = notes);
 //        this.lastConnection.mockRespond(new Response(new ResponseOptions({

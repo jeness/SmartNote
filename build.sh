@@ -1,5 +1,6 @@
 
 cd smart-note 
+npm run build
 # npm install 
 # npm install simplemde --save  
 # npm install angular-highlightjs --save
@@ -7,15 +8,15 @@ cd smart-note
 # npm install chai
 # npm install supertest --save-dev
 
-mkdir -p /data/db
-chown -R `id -un` /data/db
+# mkdir -p /data/db
+# chown -R `id -un` /data/db
 
-cd server
-npm install
-npm run dev
+# cd server
+# npm install
+# npm run dev
 
-cd ..
-npm run test
+# cd ..
+# npm run test
 #mongod & npm run dev
 
 #cd ..

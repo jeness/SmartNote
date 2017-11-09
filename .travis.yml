@@ -1,26 +1,32 @@
+# language: node_js
+# node_js:
+#   - "8.5"
+# os: osx
+
+# branches:
+#   only:
+#     - master
+# before_install:
+#  - export CHROME_BIN=chromium-browser
+
+# services:
+#   mongodb
+# before_script:
+
+
+# script:
+#   sleep 15
+#   sh build.sh
+#   sleep 15
+#   sh buildclient.sh
+
+# notifications:
+#   email:
+#     on_failure: change
+#     on_success: change
+
 language: node_js
 node_js:
   - "8.5"
-os: osx
-
-branches:
-  only:
-    - master
-before_install:
- - export CHROME_BIN=chromium-browser
-
-services:
-  mongodb
-before_script:
-
-
-script:
-  sleep 15
-  sh build.sh
-  sleep 15
-  sh buildclient.sh
-
-notifications:
-  email:
-    on_failure: change
-    on_success: change
+env: NODE_ENV=test
+services: mongodb

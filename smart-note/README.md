@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
+
+
 
 # SmartNote
 
@@ -10,6 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Group Augo.
 
+Check our demo here at [SmartNote](http://128.227.246.42:4300).
 
 ## Features
 - Account management: sign in, sign out.
@@ -44,7 +47,7 @@ Run `npm run start` to start the application. Navigate to `http://localhost:4300
 Run `npm install` and `npm run dev`.
 
 5. Exit mongo service:
-- To exit the Mongo shell run `quit()
+- To exit the Mongo shell run `quit()`
 - to quit the Mongo daemon, hit `ctrl-c`.
 
 6. Backend Testing:

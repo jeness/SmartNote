@@ -12,6 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Group Augo.
 
+Check our demo here at [SmartNote](http://128.227.246.42:4300).
 
 ## Features
 - Account management: sign in, sign out.

@@ -58,6 +58,8 @@ Run `npm install` and `npm run dev`.
 And to run backend test in the folder /smartnote using 
 `mocha test.js `.
 
+## Deploy
+We deployed our project on a server [SmartNote](http://128.227.246.42:4300).
 
 ## Dependencies
 For markdown directives, you need to install some libraries.

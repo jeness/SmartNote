@@ -34,9 +34,7 @@ Check our demo here at [SmartNote](http://128.227.246.42:4300).
 - Open the Terminal app and type `brew update`.
 - After updating Homebrew `brew install mongodb`
 - After downloading Mongo, create the “db” directory. This is where the Mongo data files will live. You can create the directory in the default location by running `mkdir -p /data/db`
-- Make sure that the /data/db directory has the right permissions by running
-
-``sudo chown -R `id -un` /data/db``
+- Make sure that the /data/db directory has the right permissions by running ``sudo chown -R `id -un` /data/db``.
 
 2. Run `mongod` in the terminal to start the the Mongo daemon, this step starts the Mongo serever.
 
@@ -77,6 +75,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running backend tests
+
+Run `mocha test.js` to execute the backend tests via [Mocha](https://github.com/mochajs/mocha).
 
 ## Running unit tests
 

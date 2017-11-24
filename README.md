@@ -98,7 +98,26 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### Login
 ![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/1_login.png)
 
+### URL Note
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/2_URL.png)
+
+### Tag
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/4_tag.png)
+
+### Add Markdown Note
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/5_addnote.png)
+
+### View Note
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/6_view.png)
+
+### Modify Note
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/7_edit.png)
+
+### Review Archived Note
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/8_archive.png)
+
+### Search
+![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/9_search.png)
 
 ### About
 ![](https://github.com/Shanfang/SmartNote/blob/master/Screenshots/3_about.png)
-

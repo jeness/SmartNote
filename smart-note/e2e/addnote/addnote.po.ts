@@ -17,11 +17,11 @@ export class Addnote {
     return element(by.id('save-button'));
   }
 
-  getTag() {
-    //return element(by.id('tag-dropdown'));
-    return element(by.cssContainingText('li', 'DemoTag'));
-  }
-  getTagList() {
-    return element(by.css('my-dropdown-menu'));
-  }
+  // getTag() {
+  //   //return element(by.id('tag-dropdown'));
+  //   return element(by.cssContainingText('li', 'DemoTag'));
+  // }
+  // getTagList() {
+  //   return element(by.css('my-dropdown-menu'));
+  // }
 }

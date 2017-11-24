@@ -26,6 +26,6 @@
 //   });
 
 //   it('should be created', () => {
-//     expect(component.tagName).toBe('');
+//     expect(component).toBeTruthy();
 //   });
 // });

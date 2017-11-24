@@ -2,6 +2,7 @@
 // import { FormsModule } from '@angular/forms';
 
 // import { EditNoteComponent } from './edit-note.component';
+// import { DropdownComponent } from './../../component/dropdown/dropdown.component';
 
 // describe('EditNoteComponent', () => {
 //   let component: EditNoteComponent;
@@ -10,7 +11,7 @@
 //   beforeEach(async(() => {
 //     TestBed.configureTestingModule({
 //       imports: [FormsModule],
-//       declarations: [ EditNoteComponent ]
+//       declarations: [ EditNoteComponent, DropdownComponent ]
 //     })
 //     .compileComponents();
 //   }));

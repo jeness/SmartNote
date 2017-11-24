@@ -1,7 +1,7 @@
 // import { TestBed, inject } from '@angular/core/testing';
 // import { TagService } from './tag.service';
 // import { HttpClientModule, HttpClient } from '@angular/common/http';
-
+// // import {TagComponent} from './../../page/tag/tag.component';
 // // import { ApiService } from './../../api.service';
 // // import { ApiMockService } from './../api-mock/api-mock.service';
 
@@ -17,7 +17,7 @@
 //         //   provide:ApiService,
 //         //   useClass: ApiMockService
 //         // }
-//       ],
+//       ]
 //     });
 //   });
 
@@ -25,3 +25,4 @@
 //     expect(service).toBeTruthy();
 //   }));
 // });
+

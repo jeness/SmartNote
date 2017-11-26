@@ -9,7 +9,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
+      //require('karma-coverage-istanbul-reporter'),
       require('karma-coverage'),
       require('@angular/cli/plugins/karma')
     ],
@@ -24,10 +24,10 @@ module.exports = function (config) {
           { type: 'lcov' }
         ]
     },
-    coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
-      fixWebpackSourcePaths: true
-    },
+    //coverageIstanbulReporter: {
+    //  reports: [ 'html', 'lcovonly' ],
+    //  fixWebpackSourcePaths: true
+    //},
     angularCli: {
       environment: 'dev',
       codeCoverage: true   

@@ -1,6 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
-
-
+[![Coverage Status](https://coveralls.io/repos/github/Shanfang/SmartNote/badge.svg?branch=master)](https://coveralls.io/github/Shanfang/SmartNote?branch=master)
 
 # SmartNote
 

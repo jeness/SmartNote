@@ -36,6 +36,27 @@ describe('login', function() {
     });   
 });
 
+// describe('POST/tag', () => {
+//     it('should create a new tag', (done) => {
+//         var TestTag = new Tag({
+//             Name: 'tag1',
+//             id: 1
+//         })
+//     });
+
+//     request(app)
+//         .post('/api/tag')
+//         .send(TestTag)
+//         .expect(200)
+//         .expect((response) => {
+//             expect(response.body.id).toBe(TestTag.id);
+//         })
+//         .end((error, response) => {
+//             if (error) {
+//                 return done(error);
+//             }
+//         })
+// });
 // describe("Test Search", function() {
 // 	it("Test Post Request", function(done) {
 //             chai.request(postReqURL)

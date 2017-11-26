@@ -84,6 +84,8 @@ Run `mocha test.js` to execute the backend tests via [Mocha](https://github.com/
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+Before that, you need to install dependencies of karma-coverage, please run `npm install karma karma-coverage --save-dev`.
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).

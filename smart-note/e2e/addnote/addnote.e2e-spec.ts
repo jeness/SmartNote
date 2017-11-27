@@ -41,14 +41,14 @@ describe('Addnote page', () => {
     //let tag = page.getTag();
     //let tagList = page.getTagList();
     
-    noteTitle.sendKeys('This is a note for demo3');
+    noteTitle.sendKeys('This is a note for demo4');
     //tag.click();
 
-    expect(noteTitle.getAttribute('value')).toEqual('This is a note for demo3');     
+    expect(noteTitle.getAttribute('value')).toEqual('This is a note for demo4');     
     noteTitle.sendKeys(protractor.Key.ENTER);    
     sleep(); 
     noteTitle.clear();
-    noteTitle.sendKeys('This is another note for demo3');
+    noteTitle.sendKeys('This is another note for demo4');
     sleep();     
   });
 

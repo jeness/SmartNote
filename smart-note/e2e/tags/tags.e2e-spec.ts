@@ -30,8 +30,8 @@ describe('Tag Page', () => {
   
   it('should be able to add the new tag to the tag list', () => {
     var newTag = page.getNewTag()
-    newTag.sendKeys('DemoTag');
-    expect(newTag.getAttribute('value')).toEqual('DemoTag'); 
+    newTag.sendKeys('SmartNote');
+    expect(newTag.getAttribute('value')).toEqual('SmartNote'); 
     sleep();        
     newTag.sendKeys(protractor.Key.ENTER);    
   });

@@ -1,11 +1,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
-Shanfang Zhao : 4334-1163
 
-Xiaohui Huang : 31996128  Github: CindyHXH 
+Shanfang Zhao Github: Shanfang
 
-Lujia Yu : 54142800 Github: vicyu666
+Xiaohui Huang Github: CindyHXH 
 
-Haoran Yu : 18106994  Github: jeness 
+Lujia Yu Github: vicyu666
+
+Haoran Yu  Github: jeness 
 
 # SmartNote
 

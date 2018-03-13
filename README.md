@@ -1,5 +1,10 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/Shanfang/SmartNote.svg?branch=master)](https://travis-ci.org/Shanfang/SmartNote)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
+# SmartNote
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
+
+## Group Member
 Shanfang Zhao Github: Shanfang
 
 Xiaohui Huang Github: CindyHXH 
@@ -7,11 +12,6 @@ Xiaohui Huang Github: CindyHXH
 Lujia Yu Github: vicyu666
 
 Haoran Yu  Github: jeness 
-
-# SmartNote
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
-
 
 ## Introduction
 ![](https://github.com/Shanfang/SmartNote/blob/master/smart-note/src/assets/icons8-Pen.png)
@@ -35,7 +35,11 @@ Check our demo here at [SmartNote](http://128.227.246.42:4300).
 
 
 ## Development 
-
+0. Install homebrew and nodejs
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install node
+```
 1. Before run our application, you need to install mongodb.
 - Open the Terminal app and type `brew update`.
 - After updating Homebrew `brew install mongodb`

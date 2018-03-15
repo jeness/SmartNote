@@ -18,7 +18,7 @@ Haoran Yu  Github: jeness
 
 SmartNote is a notes app based on Angualr 4, MongoDB and Node.js developed by Group Augo.
 
-Check our demo here at [SmartNote](http://18.220.252.78:4300/).
+Check our demo here at [SmartNote](http://18.220.252.78:3001/).
 
 ## Features
 - Account management: sign in, sign out.
